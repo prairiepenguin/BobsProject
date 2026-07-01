@@ -1,0 +1,5401 @@
+{
+  "fetchedAt": "2026-07-01T10:45:01.635Z",
+  "source": {
+    "provider": "OMDb API",
+    "tvdbPath": "C:\\Users\\Jacob\\BobsProject\\data\\tvdb-194031-bobs-burgers-episodes.json",
+    "matchedBy": "IMDb IDs from TVDB remoteIds"
+  },
+  "totalTvdbEpisodes": 322,
+  "requestedEpisodes": 307,
+  "successfulEpisodes": 307,
+  "episodes": [
+    {
+      "tvdbEpisodeId": 9256222,
+      "seasonNumber": 0,
+      "episodeNumber": 9,
+      "title": "The Bob's Burgers Movie",
+      "imdbId": "tt7466442",
+      "response": "True",
+      "omdbTitle": "The Bob's Burgers Movie",
+      "omdbYear": "2022",
+      "imdbRating": "7.0",
+      "imdbVotes": "23,202",
+      "metascore": "75",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.0/10"
+        },
+        {
+          "source": "Rotten Tomatoes",
+          "value": "87%"
+        },
+        {
+          "source": "Metacritic",
+          "value": "75/100"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381351,
+      "seasonNumber": 1,
+      "episodeNumber": 1,
+      "title": "Human Flesh",
+      "imdbId": "tt1645218",
+      "response": "True",
+      "omdbTitle": "Human Flesh",
+      "omdbYear": "2011",
+      "imdbRating": "7.7",
+      "imdbVotes": "2141",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381361,
+      "seasonNumber": 1,
+      "episodeNumber": 2,
+      "title": "Crawl Space",
+      "imdbId": "tt1646300",
+      "response": "True",
+      "omdbTitle": "Crawl Space",
+      "omdbYear": "2011",
+      "imdbRating": "8.1",
+      "imdbVotes": "1944",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381371,
+      "seasonNumber": 1,
+      "episodeNumber": 3,
+      "title": "Sacred Cow",
+      "imdbId": "tt1645219",
+      "response": "True",
+      "omdbTitle": "Sacred Cow",
+      "omdbYear": "2011",
+      "imdbRating": "N/A",
+      "imdbVotes": "1601",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381401,
+      "seasonNumber": 1,
+      "episodeNumber": 4,
+      "title": "Sexy Dance Fighting",
+      "imdbId": "tt1645220",
+      "response": "True",
+      "omdbTitle": "Sexy Dance Fighting",
+      "omdbYear": "2011",
+      "imdbRating": "7.4",
+      "imdbVotes": "1573",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381391,
+      "seasonNumber": 1,
+      "episodeNumber": 5,
+      "title": "Hamburger Dinner Theater",
+      "imdbId": "tt1841032",
+      "response": "True",
+      "omdbTitle": "Hamburger Dinner Theater",
+      "omdbYear": "2011",
+      "imdbRating": "7.5",
+      "imdbVotes": "1673",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381381,
+      "seasonNumber": 1,
+      "episodeNumber": 6,
+      "title": "Sheesh! Cab, Bob?",
+      "imdbId": "tt1854660",
+      "response": "True",
+      "omdbTitle": "Sheesh! Cab, Bob?",
+      "omdbYear": "2011",
+      "imdbRating": "N/A",
+      "imdbVotes": "1726",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381411,
+      "seasonNumber": 1,
+      "episodeNumber": 7,
+      "title": "Bed & Breakfast",
+      "imdbId": "tt1854659",
+      "response": "True",
+      "omdbTitle": "Bed & Breakfast",
+      "omdbYear": "2011",
+      "imdbRating": "N/A",
+      "imdbVotes": "1445",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381431,
+      "seasonNumber": 1,
+      "episodeNumber": 8,
+      "title": "Art Crawl",
+      "imdbId": "tt1857991",
+      "response": "True",
+      "omdbTitle": "Art Crawl",
+      "omdbYear": "2011",
+      "imdbRating": "7.9",
+      "imdbVotes": "1651",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381441,
+      "seasonNumber": 1,
+      "episodeNumber": 9,
+      "title": "Spaghetti Western and Meatballs",
+      "imdbId": "tt1857992",
+      "response": "True",
+      "omdbTitle": "Spaghetti Western and Meatballs",
+      "omdbYear": "2011",
+      "imdbRating": "7.6",
+      "imdbVotes": "1380",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381421,
+      "seasonNumber": 1,
+      "episodeNumber": 10,
+      "title": "Burger War",
+      "imdbId": "tt1876671",
+      "response": "True",
+      "omdbTitle": "Burger War",
+      "omdbYear": "2011",
+      "imdbRating": "7.7",
+      "imdbVotes": "1318",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381461,
+      "seasonNumber": 1,
+      "episodeNumber": 11,
+      "title": "Weekend at Mort's",
+      "imdbId": "tt1905230",
+      "response": "True",
+      "omdbTitle": "Weekend at Mort's",
+      "omdbYear": "2011",
+      "imdbRating": "N/A",
+      "imdbVotes": "1383",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381471,
+      "seasonNumber": 1,
+      "episodeNumber": 12,
+      "title": "Lobsterfest",
+      "imdbId": "tt1919433",
+      "response": "True",
+      "omdbTitle": "Lobsterfest",
+      "omdbYear": "2011",
+      "imdbRating": "N/A",
+      "imdbVotes": "1323",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 3381481,
+      "seasonNumber": 1,
+      "episodeNumber": 13,
+      "title": "Torpedo",
+      "imdbId": "tt1928417",
+      "response": "True",
+      "omdbTitle": "Torpedo",
+      "omdbYear": "2011",
+      "imdbRating": "7.6",
+      "imdbVotes": "1321",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4104614,
+      "seasonNumber": 2,
+      "episodeNumber": 1,
+      "title": "The Belchies",
+      "imdbId": "tt2273811",
+      "response": "True",
+      "omdbTitle": "The Belchies",
+      "omdbYear": "2012",
+      "imdbRating": "N/A",
+      "imdbVotes": "1394",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4284893,
+      "seasonNumber": 2,
+      "episodeNumber": 2,
+      "title": "Bob Day Afternoon",
+      "imdbId": "tt2020389",
+      "response": "True",
+      "omdbTitle": "Bob Day Afternoon",
+      "omdbYear": "2012",
+      "imdbRating": "N/A",
+      "imdbVotes": "1529",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4284894,
+      "seasonNumber": 2,
+      "episodeNumber": 3,
+      "title": "Synchronized Swimming",
+      "imdbId": "tt2303131",
+      "response": "True",
+      "omdbTitle": "Synchronized Swimming",
+      "omdbYear": "2012",
+      "imdbRating": "N/A",
+      "imdbVotes": "1279",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4284895,
+      "seasonNumber": 2,
+      "episodeNumber": 4,
+      "title": "Burgerboss",
+      "imdbId": "tt2317497",
+      "response": "True",
+      "omdbTitle": "Burgerboss",
+      "omdbYear": "2012",
+      "imdbRating": "8.2",
+      "imdbVotes": "1364",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4306750,
+      "seasonNumber": 2,
+      "episodeNumber": 5,
+      "title": "Food Truckin'",
+      "imdbId": "tt2340209",
+      "response": "True",
+      "omdbTitle": "Food Truckin'",
+      "omdbYear": "2012",
+      "imdbRating": "7.8",
+      "imdbVotes": "1288",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4308992,
+      "seasonNumber": 2,
+      "episodeNumber": 6,
+      "title": "Dr. Yap",
+      "imdbId": "tt2366089",
+      "response": "True",
+      "omdbTitle": "Dr. Yap",
+      "omdbYear": "2012",
+      "imdbRating": "7.5",
+      "imdbVotes": "1270",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4308993,
+      "seasonNumber": 2,
+      "episodeNumber": 7,
+      "title": "Moody Foodie",
+      "imdbId": "tt2376081",
+      "response": "True",
+      "omdbTitle": "Moody Foodie",
+      "omdbYear": "2012",
+      "imdbRating": "N/A",
+      "imdbVotes": "1256",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4316285,
+      "seasonNumber": 2,
+      "episodeNumber": 8,
+      "title": "Bad Tina",
+      "imdbId": "tt2386531",
+      "response": "True",
+      "omdbTitle": "Bad Tina",
+      "omdbYear": "2012",
+      "imdbRating": "8.0",
+      "imdbVotes": "1313",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.0/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4316286,
+      "seasonNumber": 2,
+      "episodeNumber": 9,
+      "title": "Beefsquatch",
+      "imdbId": "tt2394175",
+      "response": "True",
+      "omdbTitle": "Beefsquatch",
+      "omdbYear": "2012",
+      "imdbRating": "N/A",
+      "imdbVotes": "1249",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4345289,
+      "seasonNumber": 3,
+      "episodeNumber": 1,
+      "title": "Ear-sy Rider",
+      "imdbId": "tt2393284",
+      "response": "True",
+      "omdbTitle": "Ear-Sy Rider",
+      "omdbYear": "2012",
+      "imdbRating": "N/A",
+      "imdbVotes": "1210",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4405132,
+      "seasonNumber": 3,
+      "episodeNumber": 2,
+      "title": "Full Bars",
+      "imdbId": "tt2393286",
+      "response": "True",
+      "omdbTitle": "Full Bars",
+      "omdbYear": "2012",
+      "imdbRating": "N/A",
+      "imdbVotes": "1282",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4414475,
+      "seasonNumber": 3,
+      "episodeNumber": 3,
+      "title": "Bob Fires the Kids",
+      "imdbId": "tt2483074",
+      "response": "True",
+      "omdbTitle": "Bob Fires the Kids",
+      "omdbYear": "2012",
+      "imdbRating": "N/A",
+      "imdbVotes": "1314",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4429056,
+      "seasonNumber": 3,
+      "episodeNumber": 4,
+      "title": "Mutiny on the Windbreaker",
+      "imdbId": "tt2483078",
+      "response": "True",
+      "omdbTitle": "Mutiny on the Windbreaker",
+      "omdbYear": "2012",
+      "imdbRating": "7.5",
+      "imdbVotes": "1166",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4430514,
+      "seasonNumber": 3,
+      "episodeNumber": 5,
+      "title": "An Indecent Thanksgiving Proposal",
+      "imdbId": "tt2483080",
+      "response": "True",
+      "omdbTitle": "An Indecent Thanksgiving Proposal",
+      "omdbYear": "2012",
+      "imdbRating": "8.2",
+      "imdbVotes": "1171",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4432663,
+      "seasonNumber": 3,
+      "episodeNumber": 6,
+      "title": "The Deepening",
+      "imdbId": "tt2511944",
+      "response": "True",
+      "omdbTitle": "The Deepening",
+      "omdbYear": "2012",
+      "imdbRating": "7.8",
+      "imdbVotes": "1203",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4437664,
+      "seasonNumber": 3,
+      "episodeNumber": 7,
+      "title": "Tina-rannosaurus Wrecks",
+      "imdbId": "tt2524708",
+      "response": "True",
+      "omdbTitle": "Tina-Rannosaurus Wrecks",
+      "omdbYear": "2012",
+      "imdbRating": "8.3",
+      "imdbVotes": "1247",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.3/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4442234,
+      "seasonNumber": 3,
+      "episodeNumber": 8,
+      "title": "The Unbearable Like-Likeness of Gene",
+      "imdbId": "tt2531550",
+      "response": "True",
+      "omdbTitle": "The Unbearable Like-Likeness of Gene",
+      "omdbYear": "2012",
+      "imdbRating": "7.7",
+      "imdbVotes": "1298",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4448742,
+      "seasonNumber": 3,
+      "episodeNumber": 9,
+      "title": "Bob Rest Ye Merry Gentle-Mannequins",
+      "imdbId": "tt2531554",
+      "response": "True",
+      "omdbTitle": "Bob Rest Ye Merry Gentle-Mannequins",
+      "omdbYear": "2012",
+      "imdbRating": "7.8",
+      "imdbVotes": "1207",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4459862,
+      "seasonNumber": 3,
+      "episodeNumber": 10,
+      "title": "Mother Daughter Laser Razor",
+      "imdbId": "tt2579964",
+      "response": "True",
+      "omdbTitle": "Mother Daughter Laser Razor",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "1202",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4464219,
+      "seasonNumber": 3,
+      "episodeNumber": 11,
+      "title": "Nude Beach",
+      "imdbId": "tt2605340",
+      "response": "True",
+      "omdbTitle": "Nude Beach",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "1150",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4487373,
+      "seasonNumber": 3,
+      "episodeNumber": 12,
+      "title": "Broadcast Wagstaff School News",
+      "imdbId": "tt2615854",
+      "response": "True",
+      "omdbTitle": "Broadcast Wagstaff School News",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "1299",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4495840,
+      "seasonNumber": 3,
+      "episodeNumber": 13,
+      "title": "My Fuzzy Valentine",
+      "imdbId": "tt2661986",
+      "response": "True",
+      "omdbTitle": "My Fuzzy Valentine",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "1080",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4498842,
+      "seasonNumber": 3,
+      "episodeNumber": 14,
+      "title": "Lindapendent Woman",
+      "imdbId": "tt2677612",
+      "response": "True",
+      "omdbTitle": "Lindapendent Woman",
+      "omdbYear": "2013",
+      "imdbRating": "7.8",
+      "imdbVotes": "1120",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4506120,
+      "seasonNumber": 3,
+      "episodeNumber": 15,
+      "title": "O.T.: The Outside Toilet",
+      "imdbId": "tt2708068",
+      "response": "True",
+      "omdbTitle": "O.T.: The Outside Toilet",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "1092",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4507753,
+      "seasonNumber": 3,
+      "episodeNumber": 16,
+      "title": "Topsy",
+      "imdbId": "tt2733872",
+      "response": "True",
+      "omdbTitle": "Topsy",
+      "omdbYear": "2013",
+      "imdbRating": "8.4",
+      "imdbVotes": "1230",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4507754,
+      "seasonNumber": 3,
+      "episodeNumber": 17,
+      "title": "Two for Tina",
+      "imdbId": "tt2735282",
+      "response": "True",
+      "omdbTitle": "Two for Tina",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "1126",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4507755,
+      "seasonNumber": 3,
+      "episodeNumber": 18,
+      "title": "It Snakes a Village",
+      "imdbId": "tt2735284",
+      "response": "True",
+      "omdbTitle": "It Snakes a Village",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "976",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4507756,
+      "seasonNumber": 3,
+      "episodeNumber": 19,
+      "title": "Family Fracas",
+      "imdbId": "tt2795748",
+      "response": "True",
+      "omdbTitle": "Family Fracas",
+      "omdbYear": "2013",
+      "imdbRating": "7.3",
+      "imdbVotes": "1182",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.3/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4507757,
+      "seasonNumber": 3,
+      "episodeNumber": 20,
+      "title": "The Kids Run the Restaurant",
+      "imdbId": "tt2835026",
+      "response": "True",
+      "omdbTitle": "The Kids Run the Restaurant",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "1116",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4507758,
+      "seasonNumber": 3,
+      "episodeNumber": 21,
+      "title": "Boyz 4 Now",
+      "imdbId": "tt2835028",
+      "response": "True",
+      "omdbTitle": "Boyz 4 Now",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "1339",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4507759,
+      "seasonNumber": 3,
+      "episodeNumber": 22,
+      "title": "Carpe Museum",
+      "imdbId": "tt2835032",
+      "response": "True",
+      "omdbTitle": "Carpe Museum",
+      "omdbYear": "2013",
+      "imdbRating": "8.2",
+      "imdbVotes": "1176",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4507760,
+      "seasonNumber": 3,
+      "episodeNumber": 23,
+      "title": "The Unnatural",
+      "imdbId": "tt2835034",
+      "response": "True",
+      "omdbTitle": "The Unnatural",
+      "omdbYear": "2013",
+      "imdbRating": "7.5",
+      "imdbVotes": "1079",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4423729,
+      "seasonNumber": 4,
+      "episodeNumber": 1,
+      "title": "A River Runs Through Bob",
+      "imdbId": "tt2531556",
+      "response": "True",
+      "omdbTitle": "A River Runs Through Bob",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "1160",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4618539,
+      "seasonNumber": 4,
+      "episodeNumber": 2,
+      "title": "Fort Night",
+      "imdbId": "tt3211834",
+      "response": "True",
+      "omdbTitle": "Fort Night",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "1113",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4618541,
+      "seasonNumber": 4,
+      "episodeNumber": 3,
+      "title": "Seaplane!",
+      "imdbId": "tt3280380",
+      "response": "True",
+      "omdbTitle": "Seaplane!",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "1010",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4618542,
+      "seasonNumber": 4,
+      "episodeNumber": 4,
+      "title": "My Big Fat Greek Bob",
+      "imdbId": "tt3304836",
+      "response": "True",
+      "omdbTitle": "My Big Fat Greek Bob",
+      "omdbYear": "2013",
+      "imdbRating": "7.5",
+      "imdbVotes": "1058",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4618544,
+      "seasonNumber": 4,
+      "episodeNumber": 5,
+      "title": "Turkey in a Can",
+      "imdbId": "tt3304838",
+      "response": "True",
+      "omdbTitle": "Turkey in a Can",
+      "omdbYear": "2013",
+      "imdbRating": "8.3",
+      "imdbVotes": "1112",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.3/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4618545,
+      "seasonNumber": 4,
+      "episodeNumber": 6,
+      "title": "Purple Rain-Union",
+      "imdbId": "tt3341538",
+      "response": "True",
+      "omdbTitle": "Purple Rain-Union",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "959",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4618547,
+      "seasonNumber": 4,
+      "episodeNumber": 7,
+      "title": "Bob and Deliver",
+      "imdbId": "tt3344302",
+      "response": "True",
+      "omdbTitle": "Bob and Deliver",
+      "omdbYear": "2013",
+      "imdbRating": "N/A",
+      "imdbVotes": "968",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4618548,
+      "seasonNumber": 4,
+      "episodeNumber": 8,
+      "title": "Christmas in the Car",
+      "imdbId": "tt3379840",
+      "response": "True",
+      "omdbTitle": "Christmas in the Car",
+      "omdbYear": "2013",
+      "imdbRating": "8.2",
+      "imdbVotes": "1219",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4618550,
+      "seasonNumber": 4,
+      "episodeNumber": 9,
+      "title": "Slumber Party",
+      "imdbId": "tt3406076",
+      "response": "True",
+      "omdbTitle": "Slumber Party",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "973",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4618551,
+      "seasonNumber": 4,
+      "episodeNumber": 10,
+      "title": "Presto Tina-O",
+      "imdbId": "tt3422500",
+      "response": "True",
+      "omdbTitle": "Presto-Tina-o",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "869",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4618552,
+      "seasonNumber": 4,
+      "episodeNumber": 11,
+      "title": "Easy Com-mercial, Easy Go-mercial",
+      "imdbId": "tt3457742",
+      "response": "True",
+      "omdbTitle": "Easy Com-mercial, Easy Go-mercial",
+      "omdbYear": "2014",
+      "imdbRating": "7.5",
+      "imdbVotes": "847",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4618553,
+      "seasonNumber": 4,
+      "episodeNumber": 12,
+      "title": "The Frond Files",
+      "imdbId": "tt3550794",
+      "response": "True",
+      "omdbTitle": "The Frond Files",
+      "omdbYear": "2014",
+      "imdbRating": "8.0",
+      "imdbVotes": "931",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.0/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4707579,
+      "seasonNumber": 4,
+      "episodeNumber": 13,
+      "title": "Mazel-Tina",
+      "imdbId": "tt3560292",
+      "response": "True",
+      "omdbTitle": "Mazel Tina",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "940",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4707580,
+      "seasonNumber": 4,
+      "episodeNumber": 14,
+      "title": "Uncle Teddy",
+      "imdbId": "tt3577570",
+      "response": "True",
+      "omdbTitle": "Uncle Teddy",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "879",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4707587,
+      "seasonNumber": 4,
+      "episodeNumber": 15,
+      "title": "The Kids Rob a Train",
+      "imdbId": "tt3634392",
+      "response": "True",
+      "omdbTitle": "The Kids Rob a Train",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "898",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4707588,
+      "seasonNumber": 4,
+      "episodeNumber": 16,
+      "title": "I Get Psy-chic Out of You",
+      "imdbId": "tt3620196",
+      "response": "True",
+      "omdbTitle": "I Get Psychic Out of You",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "796",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4707589,
+      "seasonNumber": 4,
+      "episodeNumber": 17,
+      "title": "The Equestranauts",
+      "imdbId": "tt3636224",
+      "response": "True",
+      "omdbTitle": "The Equestranauts",
+      "omdbYear": "2014",
+      "imdbRating": "8.1",
+      "imdbVotes": "917",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4707590,
+      "seasonNumber": 4,
+      "episodeNumber": 18,
+      "title": "Ambergris",
+      "imdbId": "tt3653426",
+      "response": "True",
+      "omdbTitle": "Ambergris",
+      "omdbYear": "2014",
+      "imdbRating": "7.3",
+      "imdbVotes": "973",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.3/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4707591,
+      "seasonNumber": 4,
+      "episodeNumber": 19,
+      "title": "The Kids Run Away",
+      "imdbId": "tt3674020",
+      "response": "True",
+      "omdbTitle": "The Kids Run Away",
+      "omdbYear": "2014",
+      "imdbRating": "8.2",
+      "imdbVotes": "998",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4707592,
+      "seasonNumber": 4,
+      "episodeNumber": 20,
+      "title": "Gene It On",
+      "imdbId": "tt3686090",
+      "response": "True",
+      "omdbTitle": "Gene It On",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "836",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4707593,
+      "seasonNumber": 4,
+      "episodeNumber": 21,
+      "title": "Wharf Horse (or How Bob Saves/Destroys the Town) (1)",
+      "imdbId": "tt3686084",
+      "response": "True",
+      "omdbTitle": "Wharf Horse (or How Bob Saves/Destroys the Town - Part I)",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "937",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4707595,
+      "seasonNumber": 4,
+      "episodeNumber": 22,
+      "title": "World Wharf II: The Wharfening (or How Bob Saves/Destroys the Town) (2)",
+      "imdbId": "tt3686092",
+      "response": "True",
+      "omdbTitle": "World Wharf II: The Wharfening (or How Bob Saves/Destroys the Town - Part II)",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "1006",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 4930610,
+      "seasonNumber": 5,
+      "episodeNumber": 1,
+      "title": "Work Hard or Die Trying, Girl",
+      "imdbId": "tt3918318",
+      "response": "True",
+      "omdbTitle": "Work Hard or Die Trying, Girl",
+      "omdbYear": "2014",
+      "imdbRating": "8.1",
+      "imdbVotes": "1007",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5016139,
+      "seasonNumber": 5,
+      "episodeNumber": 2,
+      "title": "Tina and the Real Ghost",
+      "imdbId": "tt4166422",
+      "response": "True",
+      "omdbTitle": "Tina and the Real Ghost",
+      "omdbYear": "2014",
+      "imdbRating": "7.8",
+      "imdbVotes": "1071",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5035071,
+      "seasonNumber": 5,
+      "episodeNumber": 3,
+      "title": "Friends with Burger-fits",
+      "imdbId": "tt4193272",
+      "response": "True",
+      "omdbTitle": "Friends with Burger-fits",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "797",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5043935,
+      "seasonNumber": 5,
+      "episodeNumber": 4,
+      "title": "Dawn of the Peck",
+      "imdbId": "tt4166424",
+      "response": "True",
+      "omdbTitle": "Dawn of the Peck",
+      "omdbYear": "2014",
+      "imdbRating": "8.4",
+      "imdbVotes": "1136",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5043936,
+      "seasonNumber": 5,
+      "episodeNumber": 5,
+      "title": "Best Burger",
+      "imdbId": "tt4237506",
+      "response": "True",
+      "omdbTitle": "Best Burger",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "905",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5044908,
+      "seasonNumber": 5,
+      "episodeNumber": 6,
+      "title": "Father of the Bob",
+      "imdbId": "tt4226904",
+      "response": "True",
+      "omdbTitle": "Father of the Bob",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "857",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5059612,
+      "seasonNumber": 5,
+      "episodeNumber": 7,
+      "title": "Tina Tailor Soldier Spy",
+      "imdbId": "tt4278370",
+      "response": "True",
+      "omdbTitle": "Tina Tailor Soldier Spy",
+      "omdbYear": "2014",
+      "imdbRating": "N/A",
+      "imdbVotes": "850",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5070043,
+      "seasonNumber": 5,
+      "episodeNumber": 8,
+      "title": "Midday Run",
+      "imdbId": "tt4285094",
+      "response": "True",
+      "omdbTitle": "Midday Run",
+      "omdbYear": "2015",
+      "imdbRating": "N/A",
+      "imdbVotes": "823",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5070044,
+      "seasonNumber": 5,
+      "episodeNumber": 9,
+      "title": "Speakeasy Rider",
+      "imdbId": "tt4346964",
+      "response": "True",
+      "omdbTitle": "Speakeasy Rider",
+      "omdbYear": "2015",
+      "imdbRating": "N/A",
+      "imdbVotes": "860",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5086723,
+      "seasonNumber": 5,
+      "episodeNumber": 10,
+      "title": "Late Afternoon in the Garden of Bob and Louise",
+      "imdbId": "tt4370928",
+      "response": "True",
+      "omdbTitle": "Late Afternoon in the Garden of Bob and Louise",
+      "omdbYear": "2015",
+      "imdbRating": "7.8",
+      "imdbVotes": "800",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5106979,
+      "seasonNumber": 5,
+      "episodeNumber": 11,
+      "title": "Can't Buy Me Math",
+      "imdbId": "tt4370950",
+      "response": "True",
+      "omdbTitle": "Can't Buy Me Math",
+      "omdbYear": "2015",
+      "imdbRating": "N/A",
+      "imdbVotes": "739",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5106980,
+      "seasonNumber": 5,
+      "episodeNumber": 12,
+      "title": "The Millie-churian Candidate",
+      "imdbId": "tt4393148",
+      "response": "True",
+      "omdbTitle": "The Millie-churian Candiate",
+      "omdbYear": "2015",
+      "imdbRating": "N/A",
+      "imdbVotes": "855",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5106981,
+      "seasonNumber": 5,
+      "episodeNumber": 13,
+      "title": "The Gayle Tales",
+      "imdbId": "tt4432866",
+      "response": "True",
+      "omdbTitle": "The Gayle Tales",
+      "omdbYear": "2015",
+      "imdbRating": "7.8",
+      "imdbVotes": "912",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5117097,
+      "seasonNumber": 5,
+      "episodeNumber": 14,
+      "title": "L'il Hard Dad",
+      "imdbId": "tt4454882",
+      "response": "True",
+      "omdbTitle": "L'il Hard Dad",
+      "omdbYear": "2015",
+      "imdbRating": "7.5",
+      "imdbVotes": "822",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5147543,
+      "seasonNumber": 5,
+      "episodeNumber": 15,
+      "title": "Adventures in Chinchilla-sitting",
+      "imdbId": "tt4469004",
+      "response": "True",
+      "omdbTitle": "Adventures in Chinchilla-sitting",
+      "omdbYear": "2015",
+      "imdbRating": "N/A",
+      "imdbVotes": "841",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5147565,
+      "seasonNumber": 5,
+      "episodeNumber": 16,
+      "title": "The Runway Club",
+      "imdbId": "tt4483572",
+      "response": "True",
+      "omdbTitle": "The Runway Club",
+      "omdbYear": "2015",
+      "imdbRating": "N/A",
+      "imdbVotes": "858",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5170198,
+      "seasonNumber": 5,
+      "episodeNumber": 17,
+      "title": "Itty Bitty Ditty Committee",
+      "imdbId": "tt4570998",
+      "response": "True",
+      "omdbTitle": "Itty Bitty Ditty Committee",
+      "omdbYear": "2015",
+      "imdbRating": "7.6",
+      "imdbVotes": "811",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5180623,
+      "seasonNumber": 5,
+      "episodeNumber": 18,
+      "title": "Eat, Spray, Linda",
+      "imdbId": "tt4576552",
+      "response": "True",
+      "omdbTitle": "Eat, Spray, Linda",
+      "omdbYear": "2015",
+      "imdbRating": "N/A",
+      "imdbVotes": "948",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5190405,
+      "seasonNumber": 5,
+      "episodeNumber": 19,
+      "title": "Housetrap",
+      "imdbId": "tt4622310",
+      "response": "True",
+      "omdbTitle": "Housetrap",
+      "omdbYear": "2015",
+      "imdbRating": "8.6",
+      "imdbVotes": "944",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5199338,
+      "seasonNumber": 5,
+      "episodeNumber": 20,
+      "title": "Hawk & Chick",
+      "imdbId": "tt4622318",
+      "response": "True",
+      "omdbTitle": "Hawk & Chick",
+      "omdbYear": "2015",
+      "imdbRating": "8.4",
+      "imdbVotes": "1005",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5199341,
+      "seasonNumber": 5,
+      "episodeNumber": 21,
+      "title": "The Oeder Games",
+      "imdbId": "tt4622328",
+      "response": "True",
+      "omdbTitle": "The Oeder Games",
+      "omdbYear": "2015",
+      "imdbRating": "N/A",
+      "imdbVotes": "975",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5261703,
+      "seasonNumber": 6,
+      "episodeNumber": 1,
+      "title": "Sliding Bobs",
+      "imdbId": "tt4806434",
+      "response": "True",
+      "omdbTitle": "Sliding Bobs",
+      "omdbYear": "2015",
+      "imdbRating": "N/A",
+      "imdbVotes": "853",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5335939,
+      "seasonNumber": 6,
+      "episodeNumber": 2,
+      "title": "The Land Ship",
+      "imdbId": "tt5043080",
+      "response": "True",
+      "omdbTitle": "The Land Ship",
+      "omdbYear": "2015",
+      "imdbRating": "N/A",
+      "imdbVotes": "745",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5344935,
+      "seasonNumber": 6,
+      "episodeNumber": 3,
+      "title": "The Hauntening",
+      "imdbId": "tt5062580",
+      "response": "True",
+      "omdbTitle": "The Hauntening",
+      "omdbYear": "2015",
+      "imdbRating": "9.1",
+      "imdbVotes": "1579",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "9.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5371483,
+      "seasonNumber": 6,
+      "episodeNumber": 4,
+      "title": "Gayle Makin' Bob Sled",
+      "imdbId": "tt5124542",
+      "response": "True",
+      "omdbTitle": "Gayle Makin' Bob Sled",
+      "omdbYear": "2015",
+      "imdbRating": "7.6",
+      "imdbVotes": "782",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5373900,
+      "seasonNumber": 6,
+      "episodeNumber": 5,
+      "title": "Nice-Capades",
+      "imdbId": "tt5147222",
+      "response": "True",
+      "omdbTitle": "Nice-Capades",
+      "omdbYear": "2015",
+      "imdbRating": "N/A",
+      "imdbVotes": "741",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5418001,
+      "seasonNumber": 6,
+      "episodeNumber": 6,
+      "title": "The Cook, the Steve, the Gayle, & Her Lover",
+      "imdbId": "tt5204516",
+      "response": "True",
+      "omdbTitle": "The Cook, the Steve, the Gayle, & Her Lover",
+      "omdbYear": "2016",
+      "imdbRating": "7.8",
+      "imdbVotes": "820",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5483267,
+      "seasonNumber": 6,
+      "episodeNumber": 7,
+      "title": "The Gene and Courtney Show",
+      "imdbId": "tt5352800",
+      "response": "True",
+      "omdbTitle": "The Gene and Courtney Show",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "676",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5496843,
+      "seasonNumber": 6,
+      "episodeNumber": 8,
+      "title": "Sexy Dance Healing",
+      "imdbId": "tt5461660",
+      "response": "True",
+      "omdbTitle": "Sexy Dance Healing",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "684",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5509372,
+      "seasonNumber": 6,
+      "episodeNumber": 9,
+      "title": "Sacred Couch",
+      "imdbId": "tt5527708",
+      "response": "True",
+      "omdbTitle": "Sacred Couch",
+      "omdbYear": "2016",
+      "imdbRating": "7.2",
+      "imdbVotes": "860",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5511062,
+      "seasonNumber": 6,
+      "episodeNumber": 10,
+      "title": "Lice Things Are Lice",
+      "imdbId": "tt5509096",
+      "response": "True",
+      "omdbTitle": "Lice Things Are Lice",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "706",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5539648,
+      "seasonNumber": 6,
+      "episodeNumber": 11,
+      "title": "House of 1000 Bounces",
+      "imdbId": "tt5555436",
+      "response": "True",
+      "omdbTitle": "House of 1000 Bounces",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "769",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5539649,
+      "seasonNumber": 6,
+      "episodeNumber": 12,
+      "title": "Stand by Gene",
+      "imdbId": "tt5587988",
+      "response": "True",
+      "omdbTitle": "Stand by Gene",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "824",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5545919,
+      "seasonNumber": 6,
+      "episodeNumber": 13,
+      "title": "Wag the Hog",
+      "imdbId": "tt5587990",
+      "response": "True",
+      "omdbTitle": "Wag the Hog",
+      "omdbYear": "2016",
+      "imdbRating": "7.5",
+      "imdbVotes": "758",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5557684,
+      "seasonNumber": 6,
+      "episodeNumber": 14,
+      "title": "The Hormone-iums",
+      "imdbId": "tt5606452",
+      "response": "True",
+      "omdbTitle": "The Hormone-iums",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "731",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5560652,
+      "seasonNumber": 6,
+      "episodeNumber": 15,
+      "title": "Pro Tiki/Con Tiki",
+      "imdbId": "tt5623906",
+      "response": "True",
+      "omdbTitle": "Pro Tiki/Con Tiki",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "750",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5575964,
+      "seasonNumber": 6,
+      "episodeNumber": 16,
+      "title": "Bye Bye Boo Boo",
+      "imdbId": "tt5662168",
+      "response": "True",
+      "omdbTitle": "Bye Bye Boo Boo",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "821",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5581698,
+      "seasonNumber": 6,
+      "episodeNumber": 17,
+      "title": "The Horse Rider-er",
+      "imdbId": "tt5662170",
+      "response": "True",
+      "omdbTitle": "The Horse Rider-er",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "760",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5595357,
+      "seasonNumber": 6,
+      "episodeNumber": 18,
+      "title": "Secret Admiral-irer",
+      "imdbId": "tt5662172",
+      "response": "True",
+      "omdbTitle": "Secret Admiral-irer",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "748",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5595358,
+      "seasonNumber": 6,
+      "episodeNumber": 19,
+      "title": "Glued, Where's My Bob?",
+      "imdbId": "tt5662174",
+      "response": "True",
+      "omdbTitle": "Glued, Where's My Bob?",
+      "omdbYear": "2016",
+      "imdbRating": "9.0",
+      "imdbVotes": "1311",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "9.0/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5649966,
+      "seasonNumber": 7,
+      "episodeNumber": 1,
+      "title": "Flu-ouise",
+      "imdbId": "tt5096560",
+      "response": "True",
+      "omdbTitle": "Flu-ouise",
+      "omdbYear": "2016",
+      "imdbRating": "8.1",
+      "imdbVotes": "1063",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5750392,
+      "seasonNumber": 7,
+      "episodeNumber": 2,
+      "title": "Sea Me Now",
+      "imdbId": "tt6104384",
+      "response": "True",
+      "omdbTitle": "Sea Me Now",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "843",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5772212,
+      "seasonNumber": 7,
+      "episodeNumber": 3,
+      "title": "Teen-a Witch",
+      "imdbId": "tt6114346",
+      "response": "True",
+      "omdbTitle": "Teen-a-Witch",
+      "omdbYear": "2016",
+      "imdbRating": "7.6",
+      "imdbVotes": "755",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5788380,
+      "seasonNumber": 7,
+      "episodeNumber": 4,
+      "title": "They Serve Horses, Don't They?",
+      "imdbId": "tt6146960",
+      "response": "True",
+      "omdbTitle": "They Serve Horses, Don't They?",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "781",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5813456,
+      "seasonNumber": 7,
+      "episodeNumber": 5,
+      "title": "Larger Brother, Where Fart Thou?",
+      "imdbId": "tt6190702",
+      "response": "True",
+      "omdbTitle": "Larger Brother, Where Fart Thou?",
+      "omdbYear": "2016",
+      "imdbRating": "8.0",
+      "imdbVotes": "803",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.0/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5813458,
+      "seasonNumber": 7,
+      "episodeNumber": 6,
+      "title": "The Quirk-ducers",
+      "imdbId": "tt6190772",
+      "response": "True",
+      "omdbTitle": "The Quirk-ducers",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "803",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5821862,
+      "seasonNumber": 7,
+      "episodeNumber": 7,
+      "title": "The Last Gingerbread House on the Left",
+      "imdbId": "tt6213826",
+      "response": "True",
+      "omdbTitle": "The Last Gingerbread House on the Left",
+      "omdbYear": "2016",
+      "imdbRating": "N/A",
+      "imdbVotes": "868",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5861443,
+      "seasonNumber": 7,
+      "episodeNumber": 8,
+      "title": "Ex Mach Tina",
+      "imdbId": "tt6119178",
+      "response": "True",
+      "omdbTitle": "Ex Mach Tina",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "810",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5934095,
+      "seasonNumber": 7,
+      "episodeNumber": 9,
+      "title": "Bob Actually",
+      "imdbId": "tt6405378",
+      "response": "True",
+      "omdbTitle": "Bob Actually",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "995",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5942174,
+      "seasonNumber": 7,
+      "episodeNumber": 10,
+      "title": "There's No Business Like Mr. Business Business",
+      "imdbId": "tt6467848",
+      "response": "True",
+      "omdbTitle": "There's No Business Like Mr. Business Business",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "732",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5919386,
+      "seasonNumber": 7,
+      "episodeNumber": 11,
+      "title": "A Few 'Gurt Men",
+      "imdbId": "tt6545324",
+      "response": "True",
+      "omdbTitle": "A Few 'Gurt Men",
+      "omdbYear": "2017",
+      "imdbRating": "8.1",
+      "imdbVotes": "795",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5971115,
+      "seasonNumber": 7,
+      "episodeNumber": 12,
+      "title": "Like Gene for Chocolate",
+      "imdbId": "tt6540330",
+      "response": "True",
+      "omdbTitle": "Like Gene for Chocolate",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "681",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5978611,
+      "seasonNumber": 7,
+      "episodeNumber": 13,
+      "title": "The Grand Mama-Pest Hotel",
+      "imdbId": "tt6570836",
+      "response": "True",
+      "omdbTitle": "The Grand Mama-Pest Hotel",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "651",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5988696,
+      "seasonNumber": 7,
+      "episodeNumber": 14,
+      "title": "Aquaticism",
+      "imdbId": "tt6597072",
+      "response": "True",
+      "omdbTitle": "Aquaticism",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "741",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 5988697,
+      "seasonNumber": 7,
+      "episodeNumber": 15,
+      "title": "Ain't Miss Debatin'",
+      "imdbId": "tt6597076",
+      "response": "True",
+      "omdbTitle": "Ain't Miss Debatin'",
+      "omdbYear": "2017",
+      "imdbRating": "8.0",
+      "imdbVotes": "722",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.0/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6000745,
+      "seasonNumber": 7,
+      "episodeNumber": 16,
+      "title": "Eggs for Days",
+      "imdbId": "tt6631398",
+      "response": "True",
+      "omdbTitle": "Eggs for Days",
+      "omdbYear": "2017",
+      "imdbRating": "8.2",
+      "imdbVotes": "683",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6025779,
+      "seasonNumber": 7,
+      "episodeNumber": 17,
+      "title": "Zero Larp Thirty",
+      "imdbId": "tt6715452",
+      "response": "True",
+      "omdbTitle": "Zero Larp Thirty",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "648",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6025780,
+      "seasonNumber": 7,
+      "episodeNumber": 18,
+      "title": "The Laser-inth",
+      "imdbId": "tt6733190",
+      "response": "True",
+      "omdbTitle": "The Laser-inth",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "778",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6035498,
+      "seasonNumber": 7,
+      "episodeNumber": 19,
+      "title": "Thelma & Louise Except Thelma is Linda",
+      "imdbId": "tt6733194",
+      "response": "True",
+      "omdbTitle": "Thelma & Louise Except Thelma Is Linda",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "795",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6039238,
+      "seasonNumber": 7,
+      "episodeNumber": 20,
+      "title": "Mom, Lies, and Videotapes",
+      "imdbId": "tt6733202",
+      "response": "True",
+      "omdbTitle": "Mom, Lies and Videotapes",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "687",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6043145,
+      "seasonNumber": 7,
+      "episodeNumber": 21,
+      "title": "Paraders of the Lost Float",
+      "imdbId": "tt6733206",
+      "response": "True",
+      "omdbTitle": "Paraders of the Lost Float",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "715",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6094678,
+      "seasonNumber": 7,
+      "episodeNumber": 22,
+      "title": "Into the Mild",
+      "imdbId": "tt6733212",
+      "response": "True",
+      "omdbTitle": "Into the Mild",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "744",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6148886,
+      "seasonNumber": 8,
+      "episodeNumber": 1,
+      "title": "Brunchsquatch",
+      "imdbId": "tt6993092",
+      "response": "True",
+      "omdbTitle": "Brunchsquatch",
+      "omdbYear": "2017",
+      "imdbRating": "7.8",
+      "imdbVotes": "1012",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6324458,
+      "seasonNumber": 8,
+      "episodeNumber": 2,
+      "title": "The Silence of the Louise",
+      "imdbId": "tt7437468",
+      "response": "True",
+      "omdbTitle": "The Silence of the Louise",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "791",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6336108,
+      "seasonNumber": 8,
+      "episodeNumber": 3,
+      "title": "The Wolf of Wharf Street",
+      "imdbId": "tt7437454",
+      "response": "True",
+      "omdbTitle": "The Wolf of Wharf Street",
+      "omdbYear": "2017",
+      "imdbRating": "N/A",
+      "imdbVotes": "679",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6357971,
+      "seasonNumber": 8,
+      "episodeNumber": 4,
+      "title": "Sit Me Baby One More Time",
+      "imdbId": "tt7542490",
+      "response": "True",
+      "omdbTitle": "Sit Me Baby One More Time",
+      "omdbYear": "2017",
+      "imdbRating": "7.8",
+      "imdbVotes": "745",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6372023,
+      "seasonNumber": 8,
+      "episodeNumber": 5,
+      "title": "Thanks-hoarding",
+      "imdbId": "tt7585872",
+      "response": "True",
+      "omdbTitle": "Thanks-hoarding",
+      "omdbYear": "2017",
+      "imdbRating": "7.8",
+      "imdbVotes": "750",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6391430,
+      "seasonNumber": 8,
+      "episodeNumber": 6,
+      "title": "The Bleakening (1)",
+      "imdbId": "tt7635808",
+      "response": "True",
+      "omdbTitle": "The Bleakening",
+      "omdbYear": "2017",
+      "imdbRating": "8.3",
+      "imdbVotes": "1008",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.3/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6432337,
+      "seasonNumber": 8,
+      "episodeNumber": 8,
+      "title": "V for Valentine-detta",
+      "imdbId": "tt7733366",
+      "response": "True",
+      "omdbTitle": "V for Valentine-detta",
+      "omdbYear": "2018",
+      "imdbRating": "8.2",
+      "imdbVotes": "845",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6500448,
+      "seasonNumber": 8,
+      "episodeNumber": 9,
+      "title": "Y Tu Ga-Ga Tambien",
+      "imdbId": "tt7852806",
+      "response": "True",
+      "omdbTitle": "Y Tu Ga-Ga Tambien",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "638",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6567623,
+      "seasonNumber": 8,
+      "episodeNumber": 10,
+      "title": "The Secret Ceramics Room of Secrets",
+      "imdbId": "tt8045718",
+      "response": "True",
+      "omdbTitle": "The Secret Ceramics Room of Secrets",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "590",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6579719,
+      "seasonNumber": 8,
+      "episodeNumber": 11,
+      "title": "Sleeping with the Frenemy",
+      "imdbId": "tt8075308",
+      "response": "True",
+      "omdbTitle": "Sleeping with the Frenemy",
+      "omdbYear": "2018",
+      "imdbRating": "7.5",
+      "imdbVotes": "655",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6590256,
+      "seasonNumber": 8,
+      "episodeNumber": 12,
+      "title": "The Hurt Soccer",
+      "imdbId": "tt8110994",
+      "response": "True",
+      "omdbTitle": "The Hurt Soccer",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "631",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6601700,
+      "seasonNumber": 8,
+      "episodeNumber": 13,
+      "title": "Cheer Up, Sleepy Gene",
+      "imdbId": "tt8174214",
+      "response": "True",
+      "omdbTitle": "Cheer Up Sleepy Gene",
+      "omdbYear": "2018",
+      "imdbRating": "7.6",
+      "imdbVotes": "673",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6611574,
+      "seasonNumber": 8,
+      "episodeNumber": 14,
+      "title": "The Trouble with Doubles",
+      "imdbId": "tt8254030",
+      "response": "True",
+      "omdbTitle": "The Trouble with Doubles",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "689",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6614880,
+      "seasonNumber": 8,
+      "episodeNumber": 15,
+      "title": "Go Tina on the Mountain",
+      "imdbId": "tt8254032",
+      "response": "True",
+      "omdbTitle": "Go Tina on the Mountain",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "635",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6625842,
+      "seasonNumber": 8,
+      "episodeNumber": 16,
+      "title": "Are You There Bob? It's Me, Birthday",
+      "imdbId": "tt8012166",
+      "response": "True",
+      "omdbTitle": "Are You There Bob? It's Me, Birthday",
+      "omdbYear": "2018",
+      "imdbRating": "7.7",
+      "imdbVotes": "574",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6634589,
+      "seasonNumber": 8,
+      "episodeNumber": 17,
+      "title": "Boywatch",
+      "imdbId": "tt8259880",
+      "response": "True",
+      "omdbTitle": "Boywatch",
+      "omdbYear": "2018",
+      "imdbRating": "7.4",
+      "imdbVotes": "560",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6661973,
+      "seasonNumber": 8,
+      "episodeNumber": 18,
+      "title": "As I Walk Through the Alley of the Shadow of Ramps",
+      "imdbId": "tt8259884",
+      "response": "True",
+      "omdbTitle": "As I Walk Through the Alley of the Shadow of Ramps",
+      "omdbYear": "2018",
+      "imdbRating": "7.7",
+      "imdbVotes": "669",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6661974,
+      "seasonNumber": 8,
+      "episodeNumber": 19,
+      "title": "Mo Mommy, Mo Problems",
+      "imdbId": "tt8259896",
+      "response": "True",
+      "omdbTitle": "Mo Mommy Mo Problems",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "652",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6662886,
+      "seasonNumber": 8,
+      "episodeNumber": 20,
+      "title": "Mission Impos-slug-ble",
+      "imdbId": "tt8259898",
+      "response": "True",
+      "omdbTitle": "Mission Impos-Slug-Ble",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "630",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6665351,
+      "seasonNumber": 8,
+      "episodeNumber": 21,
+      "title": "Something Old, Something New, Something Bob Caters for You",
+      "imdbId": "tt8259902",
+      "response": "True",
+      "omdbTitle": "Something Old, Something New, Something Bob Caters for You",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "733",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6743009,
+      "seasonNumber": 9,
+      "episodeNumber": 1,
+      "title": "Just One of the Boyz 4 Now for Now",
+      "imdbId": "tt8407530",
+      "response": "True",
+      "omdbTitle": "Just One of the Boyz 4 Now for Now",
+      "omdbYear": "2018",
+      "imdbRating": "7.6",
+      "imdbVotes": "915",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6825861,
+      "seasonNumber": 9,
+      "episodeNumber": 2,
+      "title": "The Taking of Funtime One Two Three",
+      "imdbId": "tt8651752",
+      "response": "True",
+      "omdbTitle": "The Taking of Funtime One Two Three",
+      "omdbYear": "2018",
+      "imdbRating": "8.5",
+      "imdbVotes": "730",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6833532,
+      "seasonNumber": 9,
+      "episodeNumber": 3,
+      "title": "Tweentrepreneurs",
+      "imdbId": "tt8651754",
+      "response": "True",
+      "omdbTitle": "Tweentrepreneurs",
+      "omdbYear": "2018",
+      "imdbRating": "7.7",
+      "imdbVotes": "694",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6841620,
+      "seasonNumber": 9,
+      "episodeNumber": 4,
+      "title": "Nightmare on Ocean Avenue Street",
+      "imdbId": "tt8651756",
+      "response": "True",
+      "omdbTitle": "Nightmare on Ocean Avenue Street",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "744",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6859018,
+      "seasonNumber": 9,
+      "episodeNumber": 5,
+      "title": "Live and Let Fly",
+      "imdbId": "tt8651758",
+      "response": "True",
+      "omdbTitle": "Live and Let Fly",
+      "omdbYear": "2018",
+      "imdbRating": "7.4",
+      "imdbVotes": "543",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6868400,
+      "seasonNumber": 9,
+      "episodeNumber": 6,
+      "title": "Bobby Driver",
+      "imdbId": "tt8651762",
+      "response": "True",
+      "omdbTitle": "Bobby Driver",
+      "omdbYear": "2018",
+      "imdbRating": "8.1",
+      "imdbVotes": "759",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6877265,
+      "seasonNumber": 9,
+      "episodeNumber": 7,
+      "title": "I Bob Your Pardon",
+      "imdbId": "tt8651764",
+      "response": "True",
+      "omdbTitle": "I Bob Your Pardon",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "702",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6887319,
+      "seasonNumber": 9,
+      "episodeNumber": 8,
+      "title": "Roller? I Hardly Know Her!",
+      "imdbId": "tt8651766",
+      "response": "True",
+      "omdbTitle": "Roller? I Hardly Know Her!",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "563",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6896825,
+      "seasonNumber": 9,
+      "episodeNumber": 9,
+      "title": "UFO No You Didn't",
+      "imdbId": "tt8651768",
+      "response": "True",
+      "omdbTitle": "UFO No You Didn't",
+      "omdbYear": "2018",
+      "imdbRating": "N/A",
+      "imdbVotes": "596",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6904607,
+      "seasonNumber": 9,
+      "episodeNumber": 10,
+      "title": "Better Off Sled",
+      "imdbId": "tt8651770",
+      "response": "True",
+      "omdbTitle": "Better Off Sled",
+      "omdbYear": "2018",
+      "imdbRating": "8.1",
+      "imdbVotes": "704",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6938509,
+      "seasonNumber": 9,
+      "episodeNumber": 11,
+      "title": "Lorenzo's Oil? No, Linda's",
+      "imdbId": "tt9413680",
+      "response": "True",
+      "omdbTitle": "Lorenzo's Oil? No, Linda's",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "636",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6938510,
+      "seasonNumber": 9,
+      "episodeNumber": 12,
+      "title": "The Helen Hunt",
+      "imdbId": "tt9402196",
+      "response": "True",
+      "omdbTitle": "The Helen Hunt",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "686",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 6995523,
+      "seasonNumber": 9,
+      "episodeNumber": 13,
+      "title": "Bed, Bob & Beyond",
+      "imdbId": "tt9413706",
+      "response": "True",
+      "omdbTitle": "Bed, Bob & Beyond",
+      "omdbYear": "2019",
+      "imdbRating": "7.2",
+      "imdbVotes": "729",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7017137,
+      "seasonNumber": 9,
+      "episodeNumber": 14,
+      "title": "Every Which Way but Goose",
+      "imdbId": "tt9413734",
+      "response": "True",
+      "omdbTitle": "Every Which Way But Goose",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "625",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7047159,
+      "seasonNumber": 9,
+      "episodeNumber": 15,
+      "title": "The Fresh Princ-ipal",
+      "imdbId": "tt9413736",
+      "response": "True",
+      "omdbTitle": "The Fresh Princ-ipal",
+      "omdbYear": "2019",
+      "imdbRating": "8.1",
+      "imdbVotes": "619",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7047160,
+      "seasonNumber": 9,
+      "episodeNumber": 16,
+      "title": "Roamin' Bob-iday",
+      "imdbId": "tt9667904",
+      "response": "True",
+      "omdbTitle": "Roamin' Bob-iday",
+      "omdbYear": "2019",
+      "imdbRating": "7.9",
+      "imdbVotes": "608",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7074660,
+      "seasonNumber": 9,
+      "episodeNumber": 17,
+      "title": "What About Blob?",
+      "imdbId": "tt9667920",
+      "response": "True",
+      "omdbTitle": "What About Blob?",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "525",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7074664,
+      "seasonNumber": 9,
+      "episodeNumber": 18,
+      "title": "If You Love It So Much, Why Don't You Marionette?",
+      "imdbId": "tt9667930",
+      "response": "True",
+      "omdbTitle": "If You Love It So Much, Why Don't You Marionette?",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "615",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7086666,
+      "seasonNumber": 9,
+      "episodeNumber": 19,
+      "title": "Long Time Listener, First Time Bob",
+      "imdbId": "tt9667942",
+      "response": "True",
+      "omdbTitle": "Long Time Listener, First Time Bob",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "494",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7120581,
+      "seasonNumber": 9,
+      "episodeNumber": 20,
+      "title": "The Gene Mile",
+      "imdbId": "tt10093054",
+      "response": "True",
+      "omdbTitle": "The Gene Mile",
+      "omdbYear": "2019",
+      "imdbRating": "7.7",
+      "imdbVotes": "593",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7129580,
+      "seasonNumber": 9,
+      "episodeNumber": 21,
+      "title": "P.T.A. It Ain't So",
+      "imdbId": "tt10093058",
+      "response": "True",
+      "omdbTitle": "P.T.A It Ain't So",
+      "omdbYear": "2019",
+      "imdbRating": "7.3",
+      "imdbVotes": "585",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.3/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7129581,
+      "seasonNumber": 9,
+      "episodeNumber": 22,
+      "title": "Yes Without My Zeke",
+      "imdbId": "tt10093064",
+      "response": "True",
+      "omdbTitle": "Yes Without My Zeke",
+      "omdbYear": "2019",
+      "imdbRating": "7.5",
+      "imdbVotes": "567",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7250152,
+      "seasonNumber": 10,
+      "episodeNumber": 1,
+      "title": "The Ring (But Not Scary)",
+      "imdbId": "tt9771048",
+      "response": "True",
+      "omdbTitle": "The Ring (But Not Scary)",
+      "omdbYear": "2019",
+      "imdbRating": "8.2",
+      "imdbVotes": "642",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7363167,
+      "seasonNumber": 10,
+      "episodeNumber": 2,
+      "title": "Boys Just Wanna Have Fungus",
+      "imdbId": "tt10680742",
+      "response": "True",
+      "omdbTitle": "Boys Just Wanna Have Fungus",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "656",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7378238,
+      "seasonNumber": 10,
+      "episodeNumber": 3,
+      "title": "Motor, She Boat",
+      "imdbId": "tt10750116",
+      "response": "True",
+      "omdbTitle": "Motor, She Boat",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "630",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7378239,
+      "seasonNumber": 10,
+      "episodeNumber": 4,
+      "title": "Pig Trouble in Little Tina",
+      "imdbId": "tt10750120",
+      "response": "True",
+      "omdbTitle": "Pig Trouble in Little Tina",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "682",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7378241,
+      "seasonNumber": 10,
+      "episodeNumber": 5,
+      "title": "Legends of the Mall",
+      "imdbId": "tt11096572",
+      "response": "True",
+      "omdbTitle": "Legends of the Mall",
+      "omdbYear": "2019",
+      "imdbRating": "7.7",
+      "imdbVotes": "637",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7378242,
+      "seasonNumber": 10,
+      "episodeNumber": 6,
+      "title": "The Hawkening: Look Who's Hawking Now!",
+      "imdbId": "tt10769006",
+      "response": "True",
+      "omdbTitle": "The Hawkening: Look Who's Hawking Now",
+      "omdbYear": "2019",
+      "imdbRating": "7.2",
+      "imdbVotes": "600",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7436208,
+      "seasonNumber": 10,
+      "episodeNumber": 7,
+      "title": "Land of the Loft",
+      "imdbId": "tt10779038",
+      "response": "True",
+      "omdbTitle": "Land of the Loft",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "615",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7436209,
+      "seasonNumber": 10,
+      "episodeNumber": 8,
+      "title": "Now We're Not Cooking with Gas",
+      "imdbId": "tt10779028",
+      "response": "True",
+      "omdbTitle": "Now We're Not Cooking with Gas",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "584",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7456843,
+      "seasonNumber": 10,
+      "episodeNumber": 9,
+      "title": "All That Gene",
+      "imdbId": "tt11254406",
+      "response": "True",
+      "omdbTitle": "All That Gene",
+      "omdbYear": "2019",
+      "imdbRating": "6.8",
+      "imdbVotes": "590",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7463960,
+      "seasonNumber": 10,
+      "episodeNumber": 10,
+      "title": "Have Yourself a Maily Linda Christmas",
+      "imdbId": "tt11282118",
+      "response": "True",
+      "omdbTitle": "Have Yourself a Maily Linda Christmas",
+      "omdbYear": "2019",
+      "imdbRating": "N/A",
+      "imdbVotes": "481",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7469235,
+      "seasonNumber": 10,
+      "episodeNumber": 11,
+      "title": "Drumforgiven",
+      "imdbId": "tt11282120",
+      "response": "True",
+      "omdbTitle": "Drumforgiven",
+      "omdbYear": "2020",
+      "imdbRating": "N/A",
+      "imdbVotes": "583",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7557507,
+      "seasonNumber": 10,
+      "episodeNumber": 12,
+      "title": "A Fish Called Tina",
+      "imdbId": "tt11282122",
+      "response": "True",
+      "omdbTitle": "A Fish Called Tina",
+      "omdbYear": "2020",
+      "imdbRating": "7.4",
+      "imdbVotes": "575",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7575779,
+      "seasonNumber": 10,
+      "episodeNumber": 13,
+      "title": "Three Girls and a Little Wharfy",
+      "imdbId": "tt11282128",
+      "response": "True",
+      "omdbTitle": "Three Girls and a Little Wharfy",
+      "omdbYear": "2020",
+      "imdbRating": "7.4",
+      "imdbVotes": "572",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7603673,
+      "seasonNumber": 10,
+      "episodeNumber": 14,
+      "title": "Wag the Song",
+      "imdbId": "tt11282132",
+      "response": "True",
+      "omdbTitle": "Wag the Song",
+      "omdbYear": "2020",
+      "imdbRating": "7.2",
+      "imdbVotes": "556",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7603674,
+      "seasonNumber": 10,
+      "episodeNumber": 15,
+      "title": "Yurty Rotten Scoundrels",
+      "imdbId": "tt11282144",
+      "response": "True",
+      "omdbTitle": "Yurty Rotten Scoundrels",
+      "omdbYear": "2020",
+      "imdbRating": "7.0",
+      "imdbVotes": "556",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.0/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7603675,
+      "seasonNumber": 10,
+      "episodeNumber": 16,
+      "title": "Flat-Top o' the Morning to Ya",
+      "imdbId": "tt11282138",
+      "response": "True",
+      "omdbTitle": "Flat-Top O' the Morning to Ya",
+      "omdbYear": "2020",
+      "imdbRating": "7.2",
+      "imdbVotes": "394",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7622611,
+      "seasonNumber": 10,
+      "episodeNumber": 17,
+      "title": "Just the Trip",
+      "imdbId": "tt11282148",
+      "response": "True",
+      "omdbTitle": "Just the Trip",
+      "omdbYear": "2020",
+      "imdbRating": "N/A",
+      "imdbVotes": "555",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7654416,
+      "seasonNumber": 10,
+      "episodeNumber": 18,
+      "title": "Tappy Tappy Tappy Tap Tap Tap",
+      "imdbId": "tt11976590",
+      "response": "True",
+      "omdbTitle": "Tappy Tappy Tappy Tap Tap Tap",
+      "omdbYear": "2020",
+      "imdbRating": "N/A",
+      "imdbVotes": "422",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7679369,
+      "seasonNumber": 10,
+      "episodeNumber": 19,
+      "title": "The Handyman Can",
+      "imdbId": "tt11976610",
+      "response": "True",
+      "omdbTitle": "The Handyman Can",
+      "omdbYear": "2020",
+      "imdbRating": "N/A",
+      "imdbVotes": "501",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7679371,
+      "seasonNumber": 10,
+      "episodeNumber": 20,
+      "title": "Poops!... I Didn't Do It Again",
+      "imdbId": "tt11976654",
+      "response": "True",
+      "omdbTitle": "Poops!... I Didn't Do It Again",
+      "omdbYear": "2020",
+      "imdbRating": "N/A",
+      "imdbVotes": "612",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7679373,
+      "seasonNumber": 10,
+      "episodeNumber": 21,
+      "title": "Local She-ro",
+      "imdbId": "tt11976698",
+      "response": "True",
+      "omdbTitle": "Local She-ro",
+      "omdbYear": "2020",
+      "imdbRating": "N/A",
+      "imdbVotes": "528",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7679375,
+      "seasonNumber": 10,
+      "episodeNumber": 22,
+      "title": "Prank You for Being a Friend",
+      "imdbId": "tt11976736",
+      "response": "True",
+      "omdbTitle": "Prank You for Being a Friend",
+      "omdbYear": "2020",
+      "imdbRating": "7.6",
+      "imdbVotes": "561",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7812528,
+      "seasonNumber": 11,
+      "episodeNumber": 1,
+      "title": "Dream a Little Bob of Bob",
+      "imdbId": "tt11754086",
+      "response": "True",
+      "omdbTitle": "Dream a Little Bob of Bob",
+      "omdbYear": "2020",
+      "imdbRating": "7.6",
+      "imdbVotes": "629",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7812529,
+      "seasonNumber": 11,
+      "episodeNumber": 2,
+      "title": "Worms of In-Rear-ment",
+      "imdbId": "tt13056198",
+      "response": "True",
+      "omdbTitle": "Worms of In-Rear-Ment",
+      "omdbYear": "2020",
+      "imdbRating": "N/A",
+      "imdbVotes": "622",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7812530,
+      "seasonNumber": 11,
+      "episodeNumber": 3,
+      "title": "Copa-Bob-bana",
+      "imdbId": "tt13154390",
+      "response": "True",
+      "omdbTitle": "Copa-Bob-Bana",
+      "omdbYear": "2020",
+      "imdbRating": "7.3",
+      "imdbVotes": "461",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.3/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7812531,
+      "seasonNumber": 11,
+      "episodeNumber": 4,
+      "title": "Heartbreak Hotel-oween",
+      "imdbId": "tt13154408",
+      "response": "True",
+      "omdbTitle": "Heartbreak Hotel-oween",
+      "omdbYear": "2020",
+      "imdbRating": "7.5",
+      "imdbVotes": "541",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7812532,
+      "seasonNumber": 11,
+      "episodeNumber": 5,
+      "title": "Fast Time Capsules at Wagstaff School",
+      "imdbId": "tt13236022",
+      "response": "True",
+      "omdbTitle": "Fast Time Capsules at Wagstaff School",
+      "omdbYear": "2020",
+      "imdbRating": "N/A",
+      "imdbVotes": "550",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 7812533,
+      "seasonNumber": 11,
+      "episodeNumber": 6,
+      "title": "Bob Belcher and the Terrible, Horrible, No Good, Very Bad Kids",
+      "imdbId": "tt13285628",
+      "response": "True",
+      "omdbTitle": "Bob Belcher and the Terrible, Horrible, No Good, Very Bad Kids",
+      "omdbYear": "2020",
+      "imdbRating": "N/A",
+      "imdbVotes": "636",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8031974,
+      "seasonNumber": 11,
+      "episodeNumber": 7,
+      "title": "Diarrhea of a Poopy Kid",
+      "imdbId": "tt13369744",
+      "response": "True",
+      "omdbTitle": "Diarrhea of a Poopy Kid",
+      "omdbYear": "2020",
+      "imdbRating": "7.4",
+      "imdbVotes": "612",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8031975,
+      "seasonNumber": 11,
+      "episodeNumber": 8,
+      "title": "The Terminalator II: Terminals of Endearment",
+      "imdbId": "tt13404582",
+      "response": "True",
+      "omdbTitle": "The Terminalator II: Terminals of Endearment",
+      "omdbYear": "2020",
+      "imdbRating": "7.9",
+      "imdbVotes": "498",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8031976,
+      "seasonNumber": 11,
+      "episodeNumber": 9,
+      "title": "Mommy Boy",
+      "imdbId": "tt13445148",
+      "response": "True",
+      "omdbTitle": "Mommy Boy",
+      "omdbYear": "2020",
+      "imdbRating": "6.9",
+      "imdbVotes": "539",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8056024,
+      "seasonNumber": 11,
+      "episodeNumber": 10,
+      "title": "Yachty or Nice",
+      "imdbId": "tt13502578",
+      "response": "True",
+      "omdbTitle": "Yachty or Nice",
+      "omdbYear": "2020",
+      "imdbRating": "7.6",
+      "imdbVotes": "456",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8031979,
+      "seasonNumber": 11,
+      "episodeNumber": 11,
+      "title": "Romancing the Beef",
+      "imdbId": "tt13670956",
+      "response": "True",
+      "omdbTitle": "Romancing the Beef",
+      "omdbYear": "2021",
+      "imdbRating": "8.0",
+      "imdbVotes": "479",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.0/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8031980,
+      "seasonNumber": 11,
+      "episodeNumber": 12,
+      "title": "Die Card, or Card Trying",
+      "imdbId": "tt13671532",
+      "response": "True",
+      "omdbTitle": "Die Card, or Card Trying",
+      "omdbYear": "2021",
+      "imdbRating": "7.8",
+      "imdbVotes": "530",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8166119,
+      "seasonNumber": 11,
+      "episodeNumber": 13,
+      "title": "An Incon-Wheelie-ent Truth",
+      "imdbId": "tt13671536",
+      "response": "True",
+      "omdbTitle": "An Incon-wheelie-ent Truth",
+      "omdbYear": "2021",
+      "imdbRating": "N/A",
+      "imdbVotes": "545",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8191092,
+      "seasonNumber": 11,
+      "episodeNumber": 14,
+      "title": "Mr. Lonely Farts",
+      "imdbId": "tt13671538",
+      "response": "True",
+      "omdbTitle": "Mr. Lonely Farts",
+      "omdbYear": "2021",
+      "imdbRating": "N/A",
+      "imdbVotes": "553",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8197911,
+      "seasonNumber": 11,
+      "episodeNumber": 15,
+      "title": "Sheshank Redumption",
+      "imdbId": "tt14139504",
+      "response": "True",
+      "omdbTitle": "Sheshank Redumption",
+      "omdbYear": "2021",
+      "imdbRating": "N/A",
+      "imdbVotes": "465",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8197927,
+      "seasonNumber": 11,
+      "episodeNumber": 16,
+      "title": "Y Tu Tina También",
+      "imdbId": "tt14140060",
+      "response": "True",
+      "omdbTitle": "Y Tu Tina También",
+      "omdbYear": "2021",
+      "imdbRating": "N/A",
+      "imdbVotes": "529",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8197928,
+      "seasonNumber": 11,
+      "episodeNumber": 17,
+      "title": "Fingers-loose",
+      "imdbId": "tt14140100",
+      "response": "True",
+      "omdbTitle": "Fingers-Loose",
+      "omdbYear": "2021",
+      "imdbRating": "7.4",
+      "imdbVotes": "616",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8197929,
+      "seasonNumber": 11,
+      "episodeNumber": 18,
+      "title": "Some Kind of Fender Benderful",
+      "imdbId": "tt14316804",
+      "response": "True",
+      "omdbTitle": "Some Kind of Fender Benderful",
+      "omdbYear": "2021",
+      "imdbRating": "6.9",
+      "imdbVotes": "562",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8260268,
+      "seasonNumber": 11,
+      "episodeNumber": 19,
+      "title": "Bridge Over Troubled Rudy",
+      "imdbId": "tt14408910",
+      "response": "True",
+      "omdbTitle": "Bridge Over Troubled Rudy",
+      "omdbYear": "2021",
+      "imdbRating": "N/A",
+      "imdbVotes": "367",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8291173,
+      "seasonNumber": 11,
+      "episodeNumber": 20,
+      "title": "Steal Magazine-olias",
+      "imdbId": "tt14534486",
+      "response": "True",
+      "omdbTitle": "Steal Magazine-olias",
+      "omdbYear": "2021",
+      "imdbRating": "7.2",
+      "imdbVotes": "416",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8310528,
+      "seasonNumber": 11,
+      "episodeNumber": 21,
+      "title": "Tell Me Dumb Thing Good",
+      "imdbId": "tt14408924",
+      "response": "True",
+      "omdbTitle": "Tell Me Dumb Thing Good",
+      "omdbYear": "2021",
+      "imdbRating": "6.9",
+      "imdbVotes": "410",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8384379,
+      "seasonNumber": 11,
+      "episodeNumber": 22,
+      "title": "Vampire Disco Death Dance",
+      "imdbId": "tt14408892",
+      "response": "True",
+      "omdbTitle": "Vampire Disco Death Dance",
+      "omdbYear": "2021",
+      "imdbRating": "7.6",
+      "imdbVotes": "484",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8580172,
+      "seasonNumber": 12,
+      "episodeNumber": 1,
+      "title": "Manic Pixie Crap Show",
+      "imdbId": "tt13154522",
+      "response": "True",
+      "omdbTitle": "Manic Pixie Crap Show",
+      "omdbYear": "2021",
+      "imdbRating": "7.4",
+      "imdbVotes": "602",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8665859,
+      "seasonNumber": 12,
+      "episodeNumber": 2,
+      "title": "Crystal Mess",
+      "imdbId": "tt14630416",
+      "response": "True",
+      "omdbTitle": "Crystal Mess",
+      "omdbYear": "2021",
+      "imdbRating": "7.4",
+      "imdbVotes": "538",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8732512,
+      "seasonNumber": 12,
+      "episodeNumber": 3,
+      "title": "The Pumpkinening",
+      "imdbId": "tt15393594",
+      "response": "True",
+      "omdbTitle": "The Pumpkinening",
+      "omdbYear": "2021",
+      "imdbRating": "7.5",
+      "imdbVotes": "535",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8732513,
+      "seasonNumber": 12,
+      "episodeNumber": 4,
+      "title": "Driving Big Dummy",
+      "imdbId": "tt15493860",
+      "response": "True",
+      "omdbTitle": "Driving Big Dummy",
+      "omdbYear": "2021",
+      "imdbRating": "7.7",
+      "imdbVotes": "634",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8787329,
+      "seasonNumber": 12,
+      "episodeNumber": 5,
+      "title": "Seven-tween Again",
+      "imdbId": "tt15534592",
+      "response": "True",
+      "omdbTitle": "Seven-tween Again",
+      "omdbYear": "2021",
+      "imdbRating": "N/A",
+      "imdbVotes": "458",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8787330,
+      "seasonNumber": 12,
+      "episodeNumber": 6,
+      "title": "Beach, Please",
+      "imdbId": "tt15705472",
+      "response": "True",
+      "omdbTitle": "Beach, Please",
+      "omdbYear": "2021",
+      "imdbRating": "7.5",
+      "imdbVotes": "624",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8800239,
+      "seasonNumber": 12,
+      "episodeNumber": 7,
+      "title": "Loft in Bedslation",
+      "imdbId": "tt15730798",
+      "response": "True",
+      "omdbTitle": "Loft in Bedslation",
+      "omdbYear": "2021",
+      "imdbRating": "7.7",
+      "imdbVotes": "500",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8841619,
+      "seasonNumber": 12,
+      "episodeNumber": 8,
+      "title": "Stuck in the Kitchen with You",
+      "imdbId": "tt15800520",
+      "response": "True",
+      "omdbTitle": "Stuck in the Kitchen with You",
+      "omdbYear": "2021",
+      "imdbRating": "7.7",
+      "imdbVotes": "434",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8841620,
+      "seasonNumber": 12,
+      "episodeNumber": 9,
+      "title": "FOMO You Didn't",
+      "imdbId": "tt15844528",
+      "response": "True",
+      "omdbTitle": "FOMO You Didn't",
+      "omdbYear": "2021",
+      "imdbRating": "7.0",
+      "imdbVotes": "516",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.0/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8859614,
+      "seasonNumber": 12,
+      "episodeNumber": 10,
+      "title": "Gene's Christmas Break",
+      "imdbId": "tt16091568",
+      "response": "True",
+      "omdbTitle": "Gene's Christmas Break",
+      "omdbYear": "2021",
+      "imdbRating": "N/A",
+      "imdbVotes": "549",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8859615,
+      "seasonNumber": 12,
+      "episodeNumber": 11,
+      "title": "Touch of Eval(uations)",
+      "imdbId": "tt16450480",
+      "response": "True",
+      "omdbTitle": "Touch of Eval(uations)",
+      "omdbYear": "2022",
+      "imdbRating": "7.8",
+      "imdbVotes": "460",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8979623,
+      "seasonNumber": 12,
+      "episodeNumber": 12,
+      "title": "Ferry on My Wayward Bob and Linda",
+      "imdbId": "tt17058476",
+      "response": "True",
+      "omdbTitle": "Ferry on My Wayward Bob and Linda",
+      "omdbYear": "2022",
+      "imdbRating": "7.3",
+      "imdbVotes": "437",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.3/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 8998863,
+      "seasonNumber": 12,
+      "episodeNumber": 13,
+      "title": "Frigate Me Knot",
+      "imdbId": "tt18226944",
+      "response": "True",
+      "omdbTitle": "Frigate Me Knot",
+      "omdbYear": "2022",
+      "imdbRating": "N/A",
+      "imdbVotes": "465",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9026467,
+      "seasonNumber": 12,
+      "episodeNumber": 14,
+      "title": "Video Killed the Gene-io Star",
+      "imdbId": "tt18270570",
+      "response": "True",
+      "omdbTitle": "Video Killed the Gene-io Star",
+      "omdbYear": "2022",
+      "imdbRating": "6.9",
+      "imdbVotes": "547",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9045234,
+      "seasonNumber": 12,
+      "episodeNumber": 15,
+      "title": "Ancient Misbehavin",
+      "imdbId": "tt18334500",
+      "response": "True",
+      "omdbTitle": "Ancient Misbehavin",
+      "omdbYear": "2022",
+      "imdbRating": "N/A",
+      "imdbVotes": "381",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9045235,
+      "seasonNumber": 12,
+      "episodeNumber": 16,
+      "title": "Interview with a Pop-pop-pire",
+      "imdbId": "tt18394900",
+      "response": "True",
+      "omdbTitle": "Interview with a Pop-pop-pire",
+      "omdbYear": "2022",
+      "imdbRating": "6.8",
+      "imdbVotes": "452",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9064985,
+      "seasonNumber": 12,
+      "episodeNumber": 17,
+      "title": "The Spider House Rules",
+      "imdbId": "tt18815212",
+      "response": "True",
+      "omdbTitle": "The Spider House Rules",
+      "omdbYear": "2022",
+      "imdbRating": "7.2",
+      "imdbVotes": "423",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9084139,
+      "seasonNumber": 12,
+      "episodeNumber": 18,
+      "title": "Clear and Present Ginger",
+      "imdbId": "tt19268050",
+      "response": "True",
+      "omdbTitle": "Clear and Present Ginger",
+      "omdbYear": "2022",
+      "imdbRating": "N/A",
+      "imdbVotes": "415",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9101528,
+      "seasonNumber": 12,
+      "episodeNumber": 19,
+      "title": "A-Sprout A Boy",
+      "imdbId": "tt19268154",
+      "response": "True",
+      "omdbTitle": "A-Sprout a Boy",
+      "omdbYear": "2022",
+      "imdbRating": "6.9",
+      "imdbVotes": "459",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9104807,
+      "seasonNumber": 12,
+      "episodeNumber": 20,
+      "title": "Sauce Side Story",
+      "imdbId": "tt19268168",
+      "response": "True",
+      "omdbTitle": "Sauce Side Story",
+      "omdbYear": "2022",
+      "imdbRating": "N/A",
+      "imdbVotes": "342",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9104808,
+      "seasonNumber": 12,
+      "episodeNumber": 21,
+      "title": "Some Like It Bot Part 1: Eighth Grade Runner",
+      "imdbId": "tt19268192",
+      "response": "True",
+      "omdbTitle": "Some Like It Bot Part 1: Eighth Grade Runner",
+      "omdbYear": "2022",
+      "imdbRating": "8.2",
+      "imdbVotes": "536",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9104809,
+      "seasonNumber": 12,
+      "episodeNumber": 22,
+      "title": "Some Like It Bot Part 2: Judge-bot Day",
+      "imdbId": "tt19268216",
+      "response": "True",
+      "omdbTitle": "Some Like It Bot Part 2: Judge-bot Day",
+      "omdbYear": "2022",
+      "imdbRating": "7.6",
+      "imdbVotes": "437",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9202449,
+      "seasonNumber": 13,
+      "episodeNumber": 1,
+      "title": "To Bob, or Not to Bob",
+      "imdbId": "tt13154524",
+      "response": "True",
+      "omdbTitle": "To Bob, or Not to Bob",
+      "omdbYear": "2022",
+      "imdbRating": "7.2",
+      "imdbVotes": "560",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9344773,
+      "seasonNumber": 13,
+      "episodeNumber": 2,
+      "title": "The Reeky Lake Show",
+      "imdbId": "tt22037754",
+      "response": "True",
+      "omdbTitle": "The Reeky Lake Show",
+      "omdbYear": "2022",
+      "imdbRating": "7.5",
+      "imdbVotes": "563",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9352207,
+      "seasonNumber": 13,
+      "episodeNumber": 3,
+      "title": "What About Job?",
+      "imdbId": "tt22053394",
+      "response": "True",
+      "omdbTitle": "What About Job?",
+      "omdbYear": "2022",
+      "imdbRating": "7.4",
+      "imdbVotes": "544",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9364109,
+      "seasonNumber": 13,
+      "episodeNumber": 4,
+      "title": "Comet-y of Errors",
+      "imdbId": "tt22246546",
+      "response": "True",
+      "omdbTitle": "Comet-y of Errors",
+      "omdbYear": "2022",
+      "imdbRating": "7.4",
+      "imdbVotes": "270",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9380364,
+      "seasonNumber": 13,
+      "episodeNumber": 5,
+      "title": "So You Stink You Can Dance",
+      "imdbId": "tt22464980",
+      "response": "True",
+      "omdbTitle": "So You Stink You Can Dance",
+      "omdbYear": "2022",
+      "imdbRating": "6.9",
+      "imdbVotes": "391",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9391122,
+      "seasonNumber": 13,
+      "episodeNumber": 6,
+      "title": "Apple Gore-chard! (But Not Gory)",
+      "imdbId": "tt22505414",
+      "response": "True",
+      "omdbTitle": "Apple Gore-chard! (But Not Gory)",
+      "omdbYear": "2022",
+      "imdbRating": "7.1",
+      "imdbVotes": "408",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9415296,
+      "seasonNumber": 13,
+      "episodeNumber": 7,
+      "title": "Ready Player Gene",
+      "imdbId": "tt22689224",
+      "response": "True",
+      "omdbTitle": "Ready Player Gene",
+      "omdbYear": "2022",
+      "imdbRating": "6.8",
+      "imdbVotes": "484",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9425246,
+      "seasonNumber": 13,
+      "episodeNumber": 8,
+      "title": "Putts-giving",
+      "imdbId": "tt23055074",
+      "response": "True",
+      "omdbTitle": "Putts-giving",
+      "omdbYear": "2022",
+      "imdbRating": "7.1",
+      "imdbVotes": "512",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9456641,
+      "seasonNumber": 13,
+      "episodeNumber": 9,
+      "title": "Show Mama from the Grave",
+      "imdbId": "tt23649562",
+      "response": "True",
+      "omdbTitle": "Show Mama from the Grave",
+      "omdbYear": "2022",
+      "imdbRating": "8.3",
+      "imdbVotes": "685",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.3/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9456820,
+      "seasonNumber": 13,
+      "episodeNumber": 10,
+      "title": "The Plight Before Christmas",
+      "imdbId": "tt23708680",
+      "response": "True",
+      "omdbTitle": "The Plight Before Christmas",
+      "omdbYear": "2022",
+      "imdbRating": "9.6",
+      "imdbVotes": "2289",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "9.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9491704,
+      "seasonNumber": 13,
+      "episodeNumber": 11,
+      "title": "Cheaty Cheaty Bang Bang",
+      "imdbId": "tt24176418",
+      "response": "True",
+      "omdbTitle": "Cheaty Cheaty Bang Bang",
+      "omdbYear": "2023",
+      "imdbRating": "7.4",
+      "imdbVotes": "478",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9549526,
+      "seasonNumber": 13,
+      "episodeNumber": 12,
+      "title": "Oh Row You Didn’t",
+      "imdbId": "tt25828582",
+      "response": "True",
+      "omdbTitle": "Oh Row You Didn't",
+      "omdbYear": "2023",
+      "imdbRating": "7.2",
+      "imdbVotes": "323",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9579119,
+      "seasonNumber": 13,
+      "episodeNumber": 13,
+      "title": "Stop! Or My Mom Will Sleuth!",
+      "imdbId": "tt26591158",
+      "response": "True",
+      "omdbTitle": "Stop! Or My Mom Will Sleuth!",
+      "omdbYear": "2023",
+      "imdbRating": "7.2",
+      "imdbVotes": "357",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9618896,
+      "seasonNumber": 13,
+      "episodeNumber": 14,
+      "title": "These Boots Are Made for Stalking",
+      "imdbId": "tt26672092",
+      "response": "True",
+      "omdbTitle": "These Boots Are Made for Stalking",
+      "omdbYear": "2023",
+      "imdbRating": "7.5",
+      "imdbVotes": "493",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9641400,
+      "seasonNumber": 13,
+      "episodeNumber": 15,
+      "title": "The Show (And Tell) Must Go On",
+      "imdbId": "tt26862538",
+      "response": "True",
+      "omdbTitle": "The Show (And Tell) Must Go On",
+      "omdbYear": "2023",
+      "imdbRating": "N/A",
+      "imdbVotes": "350",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9665637,
+      "seasonNumber": 13,
+      "episodeNumber": 16,
+      "title": "What a (April) Fool Believes",
+      "imdbId": "tt27003615",
+      "response": "True",
+      "omdbTitle": "What a (April) Fool Believes",
+      "omdbYear": "2023",
+      "imdbRating": "8.1",
+      "imdbVotes": "412",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9665638,
+      "seasonNumber": 13,
+      "episodeNumber": 17,
+      "title": "Crows Encounters of the Bird Kind",
+      "imdbId": "tt27003633",
+      "response": "True",
+      "omdbTitle": "Crows Encounters of the Bird Kind",
+      "omdbYear": "2023",
+      "imdbRating": "7.4",
+      "imdbVotes": "428",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9692209,
+      "seasonNumber": 13,
+      "episodeNumber": 18,
+      "title": "Gift Card or Buy Trying",
+      "imdbId": "tt27263244",
+      "response": "True",
+      "omdbTitle": "Gift Card or Buy Trying",
+      "omdbYear": "2023",
+      "imdbRating": "7.1",
+      "imdbVotes": "356",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.1/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9709920,
+      "seasonNumber": 13,
+      "episodeNumber": 19,
+      "title": "Crab-solutely Fabulous",
+      "imdbId": "tt27422384",
+      "response": "True",
+      "omdbTitle": "Crab-solutely Fabulous",
+      "omdbYear": "2023",
+      "imdbRating": "6.7",
+      "imdbVotes": "384",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9715237,
+      "seasonNumber": 13,
+      "episodeNumber": 20,
+      "title": "Radio No You Didn't",
+      "imdbId": "tt27425603",
+      "response": "True",
+      "omdbTitle": "Radio No You Didn't",
+      "omdbYear": "2023",
+      "imdbRating": "7.8",
+      "imdbVotes": "438",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9715238,
+      "seasonNumber": 13,
+      "episodeNumber": 21,
+      "title": "Mother Author Laser Pointer",
+      "imdbId": "tt27440176",
+      "response": "True",
+      "omdbTitle": "Mother Author Laser Pointer",
+      "omdbYear": "2023",
+      "imdbRating": "6.8",
+      "imdbVotes": "476",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9715239,
+      "seasonNumber": 13,
+      "episodeNumber": 22,
+      "title": "Amelia",
+      "imdbId": "tt27440179",
+      "response": "True",
+      "omdbTitle": "Amelia",
+      "omdbYear": "2023",
+      "imdbRating": "8.9",
+      "imdbVotes": "894",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 9892125,
+      "seasonNumber": 14,
+      "episodeNumber": 1,
+      "title": "Fight at the Not Okay Chore-ral",
+      "imdbId": "tt26457875",
+      "response": "True",
+      "omdbTitle": "Fight at the Not Okay Chore-ral",
+      "omdbYear": "2023",
+      "imdbRating": "6.8",
+      "imdbVotes": "647",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10052209,
+      "seasonNumber": 14,
+      "episodeNumber": 2,
+      "title": "The Amazing Rudy",
+      "imdbId": "tt29141866",
+      "response": "True",
+      "omdbTitle": "The Amazing Rudy",
+      "omdbYear": "2023",
+      "imdbRating": "9.0",
+      "imdbVotes": "1361",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "9.0/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10063576,
+      "seasonNumber": 14,
+      "episodeNumber": 3,
+      "title": "The Pickleorette",
+      "imdbId": "tt29379938",
+      "response": "True",
+      "omdbTitle": "The Pickleorette",
+      "omdbYear": "2023",
+      "imdbRating": "7.3",
+      "imdbVotes": "467",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.3/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10063575,
+      "seasonNumber": 14,
+      "episodeNumber": 4,
+      "title": "Running Down a Gene",
+      "imdbId": "tt29379944",
+      "response": "True",
+      "omdbTitle": "Running Down a Gene",
+      "omdbYear": "2023",
+      "imdbRating": "6.9",
+      "imdbVotes": "108",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10098153,
+      "seasonNumber": 14,
+      "episodeNumber": 5,
+      "title": "Bully-ieve It or Not",
+      "imdbId": "tt29387714",
+      "response": "True",
+      "omdbTitle": "Bully-ieve It or Not",
+      "omdbYear": "2023",
+      "imdbRating": "7.3",
+      "imdbVotes": "477",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.3/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10109694,
+      "seasonNumber": 14,
+      "episodeNumber": 6,
+      "title": "Escape From Which Island?",
+      "imdbId": "tt29622450",
+      "response": "True",
+      "omdbTitle": "Escape from Which Island?",
+      "omdbYear": "2023",
+      "imdbRating": "N/A",
+      "imdbVotes": "379",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10129231,
+      "seasonNumber": 14,
+      "episodeNumber": 7,
+      "title": "The (Raccoon) King and I",
+      "imdbId": "tt29732135",
+      "response": "True",
+      "omdbTitle": "The (Raccoon) King and I",
+      "omdbYear": "2023",
+      "imdbRating": "6.9",
+      "imdbVotes": "190",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10135179,
+      "seasonNumber": 14,
+      "episodeNumber": 8,
+      "title": "Wharf, Me Worry?",
+      "imdbId": "tt29865867",
+      "response": "True",
+      "omdbTitle": "Wharf, Me Worry?",
+      "omdbYear": "2023",
+      "imdbRating": "7.0",
+      "imdbVotes": "244",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.0/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10153753,
+      "seasonNumber": 14,
+      "episodeNumber": 9,
+      "title": "Fraud of the Dead: Zombie-docu-pocalypse",
+      "imdbId": "tt30028400",
+      "response": "True",
+      "omdbTitle": "Fraud of the Dead: Zombie-Docu-Pocalypse",
+      "omdbYear": "2023",
+      "imdbRating": "7.9",
+      "imdbVotes": "492",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10171293,
+      "seasonNumber": 14,
+      "episodeNumber": 10,
+      "title": "The Nightmare 2 Days Before Christmas",
+      "imdbId": "tt29804427",
+      "response": "True",
+      "omdbTitle": "The Nightmare 2 Days Before Christmas",
+      "omdbYear": "2023",
+      "imdbRating": "N/A",
+      "imdbVotes": "468",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10198710,
+      "seasonNumber": 14,
+      "episodeNumber": 11,
+      "title": "Mission Impossi-Bob",
+      "imdbId": "tt30129655",
+      "response": "True",
+      "omdbTitle": "Mission Impossi-Bob",
+      "omdbYear": "2024",
+      "imdbRating": "7.4",
+      "imdbVotes": "386",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.4/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10329505,
+      "seasonNumber": 14,
+      "episodeNumber": 12,
+      "title": "Jade in the Shade",
+      "imdbId": "tt31450468",
+      "response": "True",
+      "omdbTitle": "Jade in the Shade",
+      "omdbYear": "2024",
+      "imdbRating": "7.8",
+      "imdbVotes": "261",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10482893,
+      "seasonNumber": 14,
+      "episodeNumber": 13,
+      "title": "Butt Sweat and Fears",
+      "imdbId": "tt32143987",
+      "response": "True",
+      "omdbTitle": "Butt Sweat and Fears",
+      "omdbYear": "2024",
+      "imdbRating": "7.7",
+      "imdbVotes": "179",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10598842,
+      "seasonNumber": 14,
+      "episodeNumber": 14,
+      "title": "The Big Stieblitzki",
+      "imdbId": "tt32952069",
+      "response": "True",
+      "omdbTitle": "The Big Stieblitzki",
+      "omdbYear": "2024",
+      "imdbRating": "N/A",
+      "imdbVotes": "266",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10598843,
+      "seasonNumber": 14,
+      "episodeNumber": 15,
+      "title": "The Right Tough Stuff",
+      "imdbId": "tt32952110",
+      "response": "True",
+      "omdbTitle": "The Right Tough Stuff",
+      "omdbYear": "2024",
+      "imdbRating": "7.6",
+      "imdbVotes": "297",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.6/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10598844,
+      "seasonNumber": 14,
+      "episodeNumber": 16,
+      "title": "To Catch a Beef",
+      "imdbId": "tt32952214",
+      "response": "True",
+      "omdbTitle": "To Catch a Beef",
+      "omdbYear": "2024",
+      "imdbRating": "7.9",
+      "imdbVotes": "211",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.9/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10595183,
+      "seasonNumber": 15,
+      "episodeNumber": 1,
+      "title": "The Tina Table: The Tables Have Tina-Ed",
+      "imdbId": "tt26457876",
+      "response": "True",
+      "omdbTitle": "The Tina Table: The Tables Have Tina-ed",
+      "omdbYear": "2024",
+      "imdbRating": "7.7",
+      "imdbVotes": "83",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10655818,
+      "seasonNumber": 15,
+      "episodeNumber": 2,
+      "title": "Saving Favorite Drive-In",
+      "imdbId": "tt33482013",
+      "response": "True",
+      "omdbTitle": "Saving Favorite Drive-In",
+      "omdbYear": "2024",
+      "imdbRating": "8.0",
+      "imdbVotes": "228",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.0/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10655821,
+      "seasonNumber": 15,
+      "episodeNumber": 3,
+      "title": "Colon-ly the Dronely",
+      "imdbId": "tt33621285",
+      "response": "True",
+      "omdbTitle": "Colon-ly the Dronely",
+      "omdbYear": "2024",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10655824,
+      "seasonNumber": 15,
+      "episodeNumber": 4,
+      "title": "For Whom the Doll Toes",
+      "imdbId": "tt33848067",
+      "response": "True",
+      "omdbTitle": "For Whom the Doll Toes",
+      "omdbYear": "2024",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10655826,
+      "seasonNumber": 15,
+      "episodeNumber": 5,
+      "title": "Don't Stop Be-Cheesin",
+      "imdbId": "tt34207632",
+      "response": "True",
+      "omdbTitle": "Don't Stop Be-Cheesin",
+      "omdbYear": "2024",
+      "imdbRating": "7.7",
+      "imdbVotes": "348",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.7/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10655828,
+      "seasonNumber": 15,
+      "episodeNumber": 6,
+      "title": "Hope N' Mic Night",
+      "imdbId": "tt34357665",
+      "response": "True",
+      "omdbTitle": "Hope N' Mic Night",
+      "omdbYear": "2024",
+      "imdbRating": "8.2",
+      "imdbVotes": "240",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "8.2/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10796584,
+      "seasonNumber": 15,
+      "episodeNumber": 7,
+      "title": "Boogie Days",
+      "imdbId": "tt34512189",
+      "response": "True",
+      "omdbTitle": "Boogie Days",
+      "omdbYear": "2024",
+      "imdbRating": "6.8",
+      "imdbVotes": "14",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "6.8/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10836507,
+      "seasonNumber": 15,
+      "episodeNumber": 8,
+      "title": "They Slug Horses, Don't They?",
+      "imdbId": "tt34730473",
+      "response": "True",
+      "omdbTitle": "They Slug Horses, Don't They?",
+      "omdbYear": "2024",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10836508,
+      "seasonNumber": 15,
+      "episodeNumber": 9,
+      "title": "Dog Christmas Day After Afternoon",
+      "imdbId": "tt34791042",
+      "response": "True",
+      "omdbTitle": "Dog Christmas Day After Afternoon",
+      "omdbYear": "2024",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 10855246,
+      "seasonNumber": 15,
+      "episodeNumber": 10,
+      "title": "Advice Things Are Ad-nice",
+      "imdbId": "tt34984702",
+      "response": "True",
+      "omdbTitle": "Advice Things Are Ad-nice",
+      "omdbYear": "2024",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11094091,
+      "seasonNumber": 15,
+      "episodeNumber": 11,
+      "title": "Mr. Fischoeder's Opus",
+      "imdbId": "tt36684224",
+      "response": "True",
+      "omdbTitle": "Mr. Fischoeder's Opus",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11094092,
+      "seasonNumber": 15,
+      "episodeNumber": 12,
+      "title": "Like a Candle in the Gym",
+      "imdbId": "tt36861477",
+      "response": "True",
+      "omdbTitle": "Like a Candle in the Gym",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11149696,
+      "seasonNumber": 15,
+      "episodeNumber": 13,
+      "title": "Snackface",
+      "imdbId": "tt36980689",
+      "response": "True",
+      "omdbTitle": "Snackface",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "79",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11149697,
+      "seasonNumber": 15,
+      "episodeNumber": 14,
+      "title": "The Place Beyond the Pinecones",
+      "imdbId": "tt36980733",
+      "response": "True",
+      "omdbTitle": "The Place Beyond the Pinecones",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "74",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11094093,
+      "seasonNumber": 15,
+      "episodeNumber": 15,
+      "title": "The Lost City of Atlantic",
+      "imdbId": "tt36981015",
+      "response": "True",
+      "omdbTitle": "The Lost City of Atlantic",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11165070,
+      "seasonNumber": 15,
+      "episodeNumber": 16,
+      "title": "Shell Game",
+      "imdbId": "tt37338247",
+      "response": "True",
+      "omdbTitle": "The Shell Game",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "125",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11165071,
+      "seasonNumber": 15,
+      "episodeNumber": 17,
+      "title": "Wild Steal-ions",
+      "imdbId": "tt37338459",
+      "response": "True",
+      "omdbTitle": "Wild Steal-ions",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "97",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11190751,
+      "seasonNumber": 15,
+      "episodeNumber": 18,
+      "title": "Don't Worry, Be Hoopy",
+      "imdbId": "tt37468577",
+      "response": "True",
+      "omdbTitle": "Don't Worry, Be Hoopy",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "19",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11190752,
+      "seasonNumber": 15,
+      "episodeNumber": 19,
+      "title": "The Dead Bo-ats Society",
+      "imdbId": "tt37543506",
+      "response": "True",
+      "omdbTitle": "The Dead Bo-ats Society",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11232742,
+      "seasonNumber": 15,
+      "episodeNumber": 20,
+      "title": "Dad-urday Kite Fever",
+      "imdbId": "tt37543509",
+      "response": "True",
+      "omdbTitle": "Dad-urday Kite Fever",
+      "omdbYear": "2025",
+      "imdbRating": "7.5",
+      "imdbVotes": "213",
+      "metascore": "N/A",
+      "ratings": [
+        {
+          "source": "Internet Movie Database",
+          "value": "7.5/10"
+        }
+      ],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11240287,
+      "seasonNumber": 15,
+      "episodeNumber": 21,
+      "title": "Mr. Safebody",
+      "imdbId": "tt37592952",
+      "response": "True",
+      "omdbTitle": "Mr. Safebody",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11240288,
+      "seasonNumber": 15,
+      "episodeNumber": 22,
+      "title": "InsomniBob",
+      "imdbId": "tt37599389",
+      "response": "True",
+      "omdbTitle": "Insomnibob",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11261853,
+      "seasonNumber": 16,
+      "episodeNumber": 1,
+      "title": "Grand Pre-Pre-Pre-Opening",
+      "imdbId": "tt36431668",
+      "response": "True",
+      "omdbTitle": "Grand Pre-Pre-Pre-Opening",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11325007,
+      "seasonNumber": 16,
+      "episodeNumber": 2,
+      "title": "'Til Death Do Us Art",
+      "imdbId": "tt36431657",
+      "response": "True",
+      "omdbTitle": "Til Death Do Us Art",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "81",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11358696,
+      "seasonNumber": 16,
+      "episodeNumber": 3,
+      "title": "The Twinnening",
+      "imdbId": "tt36431661",
+      "response": "True",
+      "omdbTitle": "The Twinnening",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11358697,
+      "seasonNumber": 16,
+      "episodeNumber": 4,
+      "title": "The Skids in the Hall",
+      "imdbId": "tt36431659",
+      "response": "True",
+      "omdbTitle": "The Skids in the Hall",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11381111,
+      "seasonNumber": 16,
+      "episodeNumber": 5,
+      "title": "The Secret Guardin'",
+      "imdbId": "tt36431666",
+      "response": "True",
+      "omdbTitle": "The Secret Guardin'",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11381112,
+      "seasonNumber": 16,
+      "episodeNumber": 6,
+      "title": "Get Her to the Zeke",
+      "imdbId": "tt36431670",
+      "response": "True",
+      "omdbTitle": "Get Her to the Zeke",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11381113,
+      "seasonNumber": 16,
+      "episodeNumber": 7,
+      "title": "Tube for Tina",
+      "imdbId": "tt36431658",
+      "response": "True",
+      "omdbTitle": "Tube for Tina",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11381114,
+      "seasonNumber": 16,
+      "episodeNumber": 8,
+      "title": "Les Lizárdables",
+      "imdbId": "tt36431665",
+      "response": "True",
+      "omdbTitle": "Les Lizárdables",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    },
+    {
+      "tvdbEpisodeId": 11381115,
+      "seasonNumber": 16,
+      "episodeNumber": 9,
+      "title": "It's a Stunterful Life",
+      "imdbId": "tt36431669",
+      "response": "True",
+      "omdbTitle": "It's a Stunter-ful Life",
+      "omdbYear": "2025",
+      "imdbRating": "N/A",
+      "imdbVotes": "N/A",
+      "metascore": "N/A",
+      "ratings": [],
+      "error": null
+    }
+  ]
+}

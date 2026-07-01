@@ -10,10 +10,13 @@ import streamlit as st
 
 APP_DIR = Path(__file__).resolve().parent
 DATA_PATH = APP_DIR / "data" / "tvdb-194031-bobs-burgers-episodes.json"
+RATINGS_PATH = APP_DIR / "data" / "omdb-bobs-burgers-ratings.json"
+TV_API_DB_PATH = APP_DIR / "bobs_burgers_tv_api.db"
 DB_PATH = APP_DIR / "bobs_burgers.db"
-APP_SCHEMA_VERSION = "2026-06-28.2"
+APP_SCHEMA_VERSION = "2026-07-01.3"
 ROLE_ORDER = ("Director", "Writer", "Actor", "Guest Star")
 CREATIVE_ROLES = ("Director", "Writer")
+DISPLAY_RATING_SOURCE = "IMDb"
 
 
 st.set_page_config(
@@ -92,6 +95,137 @@ def load_json_export() -> dict:
     return json.loads(DATA_PATH.read_text(encoding="utf-8"))
 
 
+def load_ratings_export() -> dict:
+    if not RATINGS_PATH.exists():
+        return {"episodes": [], "fetchedAt": ""}
+    return json.loads(RATINGS_PATH.read_text(encoding="utf-8-sig"))
+
+
+def merge_tv_api_ratings(conn: sqlite3.Connection) -> None:
+    if not TV_API_DB_PATH.exists():
+        return
+
+    conn.execute("ATTACH DATABASE ? AS tvapi", (str(TV_API_DB_PATH),))
+    source_rows = conn.execute(
+        """
+        SELECT imdb_id, season_number, episode_number, imdb_rating,
+               imdb_rating_count, rating_normalized, fetched_at
+        FROM tvapi.episodes
+        WHERE imdb_rating IS NOT NULL
+        """
+    ).fetchall()
+
+    target_by_imdb = {
+        row["external_id"]: row["episode_id"]
+        for row in conn.execute(
+            "SELECT episode_id, external_id FROM external_ids WHERE UPPER(source) = 'IMDB'"
+        )
+    }
+    target_by_season_episode = {
+        (row["season_number"], row["episode_number"]): row["episode_id"]
+        for row in conn.execute(
+            "SELECT episode_id, season_number, episode_number FROM episodes"
+        )
+    }
+
+    for row in source_rows:
+        episode_ids = [
+            match["episode_id"]
+            for match in conn.execute(
+                "SELECT episode_id FROM external_ids WHERE UPPER(source) = 'IMDB' AND external_id = ?",
+                (row["imdb_id"],),
+            )
+        ]
+        if not episode_ids:
+            fallback_id = target_by_season_episode.get(
+                (row["season_number"], row["episode_number"])
+            )
+            if not fallback_id:
+                continue
+            episode_ids = [fallback_id]
+            target_by_imdb[row["imdb_id"]] = fallback_id
+            conn.execute(
+                "INSERT OR IGNORE INTO external_ids (episode_id, source, external_id) VALUES (?, 'IMDB', ?)",
+                (fallback_id, row["imdb_id"]),
+            )
+
+        rating = float(row["imdb_rating"])
+        normalized = row["rating_normalized"] if row["rating_normalized"] is not None else round(rating * 10, 2)
+        for episode_id in episode_ids:
+            conn.execute(
+                """
+                INSERT INTO episode_ratings (episode_id, source, rating_label, rating_normalized, votes, fetched_at)
+                VALUES (?, 'IMDb', ?, ?, ?, ?)
+                ON CONFLICT(episode_id, source) DO UPDATE SET
+                    rating_label = excluded.rating_label,
+                    rating_normalized = excluded.rating_normalized,
+                    votes = excluded.votes,
+                    fetched_at = excluded.fetched_at
+                """,
+                (
+                    episode_id,
+                    f"{rating:.1f}/10",
+                    normalized,
+                    row["imdb_rating_count"],
+                    row["fetched_at"],
+                ),
+            )
+
+
+def remote_id_map(episode: dict) -> dict[str, str]:
+    ids: dict[str, str] = {}
+    for remote in episode.get("remoteIds") or []:
+        if isinstance(remote, str) and ":" in remote:
+            source, value = remote.split(":", 1)
+            ids[source] = value
+        elif isinstance(remote, dict):
+            source = remote.get("sourceName") or remote.get("source") or remote.get("type") or remote.get("name")
+            value = remote.get("id") or remote.get("identifier") or remote.get("url")
+            if source and value:
+                ids[str(source)] = str(value)
+    return ids
+
+
+def normalized_rating(source: str, value: str | None) -> float | None:
+    if not value or value == "N/A":
+        return None
+    text = str(value).strip()
+    try:
+        if text.endswith("%"):
+            return float(text[:-1])
+        if "/" in text:
+            left, right = text.split("/", 1)
+            return float(left.replace(",", "")) / float(right.replace(",", "")) * 100
+        numeric = float(text.replace(",", ""))
+        return numeric if numeric > 10 else numeric * 10
+    except ValueError:
+        return None
+
+
+def clean_vote_count(value: str | None) -> int | None:
+    if not value or value == "N/A":
+        return None
+    digits = "".join(char for char in str(value) if char.isdigit())
+    return int(digits) if digits else None
+
+
+def rating_source_name(source: str) -> str:
+    return "IMDb" if source == "Internet Movie Database" else source
+
+
+def tvdb_content_rating(episode: dict) -> str | None:
+    ratings = episode.get("contentRatings") or []
+    if isinstance(ratings, str):
+        return ratings or None
+    if not isinstance(ratings, list):
+        return None
+    usa_rating = next((item for item in ratings if isinstance(item, dict) and item.get("country") == "usa"), None)
+    rating = usa_rating or next((item for item in ratings if isinstance(item, dict)), None)
+    if rating:
+        return rating.get("name")
+    return None
+
+
 def names_for_role(episode: dict, role: str) -> list[str]:
     source = episode.get("writers") or [] if role == "Writer" else episode.get("directors") or [] if role == "Director" else []
     names: list[str] = []
@@ -112,12 +246,19 @@ def names_for_role(episode: dict, role: str) -> list[str]:
 
 def build_database() -> None:
     payload = load_json_export()
+    ratings_payload = load_ratings_export()
     episodes = payload.get("episodes", [])
+    ratings_by_episode = {item.get("tvdbEpisodeId"): item for item in ratings_payload.get("episodes", [])}
     source_mtime = DATA_PATH.stat().st_mtime
+    ratings_mtime = RATINGS_PATH.stat().st_mtime if RATINGS_PATH.exists() else 0
+    tv_api_mtime = TV_API_DB_PATH.stat().st_mtime if TV_API_DB_PATH.exists() else 0
     conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
     try:
         conn.executescript(
             """
+            DROP TABLE IF EXISTS episode_ratings;
+            DROP TABLE IF EXISTS external_ids;
             DROP TABLE IF EXISTS credits;
             DROP TABLE IF EXISTS people;
             DROP TABLE IF EXISTS episodes;
@@ -137,6 +278,7 @@ def build_database() -> None:
                 overview TEXT,
                 image TEXT,
                 production_code TEXT,
+                content_rating TEXT,
                 last_updated TEXT
             );
             CREATE TABLE people (
@@ -155,6 +297,24 @@ def build_database() -> None:
                 FOREIGN KEY (episode_id) REFERENCES episodes (episode_id),
                 FOREIGN KEY (person_id) REFERENCES people (person_id),
                 UNIQUE (episode_id, person_id, role, character_name)
+            );
+            CREATE TABLE external_ids (
+                episode_id INTEGER NOT NULL,
+                source TEXT NOT NULL,
+                external_id TEXT NOT NULL,
+                FOREIGN KEY (episode_id) REFERENCES episodes (episode_id),
+                UNIQUE (episode_id, source)
+            );
+            CREATE TABLE episode_ratings (
+                rating_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                episode_id INTEGER NOT NULL,
+                source TEXT NOT NULL,
+                rating_label TEXT NOT NULL,
+                rating_normalized REAL,
+                votes INTEGER,
+                fetched_at TEXT,
+                FOREIGN KEY (episode_id) REFERENCES episodes (episode_id),
+                UNIQUE (episode_id, source)
             );
             """
         )
@@ -188,16 +348,44 @@ def build_database() -> None:
         for episode in episodes:
             conn.execute(
                 """
-                INSERT INTO episodes (episode_id, series_id, season_number, episode_number, absolute_number, title, aired, runtime, year, finale_type, overview, image, production_code, last_updated)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO episodes (episode_id, series_id, season_number, episode_number, absolute_number, title, aired, runtime, year, finale_type, overview, image, production_code, content_rating, last_updated)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     episode.get("id"), episode.get("seriesId"), episode.get("seasonNumber"), episode.get("number"), episode.get("absoluteNumber"),
                     episode.get("name") or "Untitled", episode.get("aired"), episode.get("runtime"),
                     int(episode["year"]) if str(episode.get("year") or "").isdigit() else None,
-                    episode.get("finaleType"), episode.get("overview"), episode.get("image"), episode.get("productionCode"), episode.get("lastUpdated"),
+                    episode.get("finaleType"), episode.get("overview"), episode.get("image"), episode.get("productionCode"), tvdb_content_rating(episode), episode.get("lastUpdated"),
                 ),
             )
+            for source, external_id in remote_id_map(episode).items():
+                conn.execute(
+                    "INSERT OR IGNORE INTO external_ids (episode_id, source, external_id) VALUES (?, ?, ?)",
+                    (episode.get("id"), source, external_id),
+                )
+            ratings_record = ratings_by_episode.get(episode.get("id"))
+            if ratings_record and ratings_record.get("response") == "True":
+                seen_rating_sources: set[str] = set()
+                for rating in ratings_record.get("ratings") or []:
+                    source = rating_source_name(rating.get("source") or "")
+                    value = rating.get("value")
+                    if not source or not value or source in seen_rating_sources:
+                        continue
+                    seen_rating_sources.add(source)
+                    conn.execute(
+                        "INSERT OR IGNORE INTO episode_ratings (episode_id, source, rating_label, rating_normalized, votes, fetched_at) VALUES (?, ?, ?, ?, ?, ?)",
+                        (
+                            episode.get("id"), source, value, normalized_rating(source, value),
+                            clean_vote_count(ratings_record.get("imdbVotes")) if source == "IMDb" else None,
+                            ratings_payload.get("fetchedAt"),
+                        ),
+                    )
+                if ratings_record.get("metascore") and ratings_record.get("metascore") != "N/A" and "Metacritic" not in seen_rating_sources:
+                    value = f'{ratings_record.get("metascore")}/100'
+                    conn.execute(
+                        "INSERT OR IGNORE INTO episode_ratings (episode_id, source, rating_label, rating_normalized, votes, fetched_at) VALUES (?, 'Metacritic', ?, ?, NULL, ?)",
+                        (episode.get("id"), value, normalized_rating("Metacritic", value), ratings_payload.get("fetchedAt")),
+                    )
             inserted_credit_keys: set[tuple[int, str, str | None]] = set()
             for credit in episode.get("characters") or []:
                 role = credit.get("peopleType")
@@ -225,7 +413,10 @@ def build_database() -> None:
                         "INSERT OR IGNORE INTO credits (episode_id, person_id, role, character_name, source) VALUES (?, ?, ?, NULL, 'TVDB')",
                         (episode.get("id"), person_id, role),
                     )
+        merge_tv_api_ratings(conn)
         conn.execute("INSERT INTO metadata (key, value) VALUES ('source_mtime', ?)", (str(source_mtime),))
+        conn.execute("INSERT INTO metadata (key, value) VALUES ('ratings_mtime', ?)", (str(ratings_mtime),))
+        conn.execute("INSERT INTO metadata (key, value) VALUES ('tv_api_mtime', ?)", (str(tv_api_mtime),))
         conn.execute("INSERT INTO metadata (key, value) VALUES ('episode_count', ?)", (str(len(episodes)),))
         conn.execute("INSERT INTO metadata (key, value) VALUES ('app_schema_version', ?)", (APP_SCHEMA_VERSION,))
         conn.executescript(
@@ -235,6 +426,8 @@ def build_database() -> None:
             CREATE INDEX idx_credits_role_person_episode ON credits(role, person_id, episode_id);
             CREATE INDEX idx_credits_episode_role_person ON credits(episode_id, role, person_id);
             CREATE INDEX idx_people_name ON people(name COLLATE NOCASE);
+            CREATE INDEX idx_external_ids_episode_source ON external_ids(episode_id, source);
+            CREATE INDEX idx_episode_ratings_episode_source ON episode_ratings(episode_id, source);
             """
         )
         conn.commit()
@@ -250,6 +443,8 @@ def database_needs_rebuild() -> bool:
     try:
         conn = sqlite3.connect(DB_PATH)
         row = conn.execute("SELECT value FROM metadata WHERE key = 'source_mtime'").fetchone()
+        ratings_row = conn.execute("SELECT value FROM metadata WHERE key = 'ratings_mtime'").fetchone()
+        tv_api_row = conn.execute("SELECT value FROM metadata WHERE key = 'tv_api_mtime'").fetchone()
         schema_row = conn.execute("SELECT value FROM metadata WHERE key = 'app_schema_version'").fetchone()
         conn.close()
     except sqlite3.Error:
@@ -257,6 +452,8 @@ def database_needs_rebuild() -> bool:
     return (
         not row
         or row[0] != str(DATA_PATH.stat().st_mtime)
+        or (RATINGS_PATH.exists() and (not ratings_row or ratings_row[0] != str(RATINGS_PATH.stat().st_mtime)))
+        or (TV_API_DB_PATH.exists() and (not tv_api_row or tv_api_row[0] != str(TV_API_DB_PATH.stat().st_mtime)))
         or not schema_row
         or schema_row[0] != APP_SCHEMA_VERSION
     )
@@ -318,7 +515,8 @@ def back_to_explorer() -> None:
 
 def render_sidebar_nav() -> str:
     st.sidebar.title("Bob's Burgers Project")
-    nav_options = ["Home", "Episodes", "Person Search", "Trends", "Teams", "Data Quality", "SQL"]
+    st.sidebar.caption(f"App build {APP_SCHEMA_VERSION}")
+    nav_options = ["Home", "Episodes", "Ratings", "Person Search", "Trends", "Teams", "Data Quality", "SQL"]
     pending_nav = st.session_state.pop("pending_nav", None)
     if pending_nav in nav_options:
         st.session_state.main_nav = pending_nav
@@ -557,10 +755,29 @@ def related_episode_rows(frame: pd.DataFrame, key_prefix: str) -> None:
         col.markdown(f'<div class="bb-list-header">{label}</div>', unsafe_allow_html=True)
     for idx, row in enumerate(frame.itertuples(index=False)):
         cols = st.columns([3, 1, 3, 2])
-        cols[0].button(f"{episode_code(row.season_number, row.episode_number)} - {row.title}", key=f"{key_prefix}-{idx}-{row.episode_id}", on_click=open_episode, args=(int(row.episode_id),), use_container_width=True)
+        cols[0].button(f"{episode_code(row.season_number, row.episode_number)} - {row.title}", key=f"{key_prefix}-{idx}-{row.episode_id}-{row.role}", on_click=open_episode, args=(int(row.episode_id),), use_container_width=True)
         cols[1].markdown(f'<div class="bb-muted">{row.aired or "Unknown"}</div>', unsafe_allow_html=True)
         cols[2].markdown(f'<div class="bb-muted">{row.shared_people or ""}</div>', unsafe_allow_html=True)
         cols[3].markdown(f'<div class="bb-muted">{row.connection_types or ""}</div>', unsafe_allow_html=True)
+
+
+def rated_episode_rows(frame: pd.DataFrame, key_prefix: str) -> None:
+    if frame.empty:
+        st.caption("No rated episodes found.")
+        return
+    header = st.columns([3, 1, 1, 1, 1])
+    for col, label in zip(header, ["Episode", "Role", "Rating", "Votes", "TVDB Content Rating"]):
+        col.markdown(f'<div class="bb-list-header">{label}</div>', unsafe_allow_html=True)
+    for idx, row in enumerate(frame.itertuples(index=False)):
+        cols = st.columns([3, 1, 1, 1, 1])
+        cols[0].button(f"{episode_code(row.season_number, row.episode_number)} - {row.title}", key=f"{key_prefix}-{idx}-{row.episode_id}", on_click=open_episode, args=(int(row.episode_id),), use_container_width=True)
+        cols[1].markdown(f'<div class="bb-muted">{row.role}</div>', unsafe_allow_html=True)
+        normalized = "" if pd.isna(row.rating_normalized) else f" ({row.rating_normalized:.1f}/100)"
+        cols[2].markdown(f'<div class="bb-muted">{row.rating_label}{normalized}</div>', unsafe_allow_html=True)
+        votes = "" if pd.isna(row.votes) else f"{int(row.votes):,}"
+        cols[3].markdown(f'<div class="bb-muted">{votes}</div>', unsafe_allow_html=True)
+        content_rating = getattr(row, "content_rating", None) or ""
+        cols[4].markdown(f'<div class="bb-muted">{content_rating}</div>', unsafe_allow_html=True)
 
 
 def episode_detail_page(episode_id: int) -> None:
@@ -571,12 +788,20 @@ def episode_detail_page(episode_id: int) -> None:
     row = episode.iloc[0]
     st.button("Back to explorer", on_click=back_to_explorer)
     page_header(row.title, "Explorer / Episode", "Writers, directors, cast, guest stars, and episodes connected by the same creative team.")
-    cols = st.columns(5)
+    cols = st.columns(6)
     cols[0].metric("Episode", episode_code(row.season_number, row.episode_number))
     cols[1].metric("Air Date", row.aired or "Unknown")
     cols[2].metric("Runtime", "Unknown" if pd.isna(row.runtime) else f"{int(row.runtime)} min")
     cols[3].metric("Year", "Unknown" if pd.isna(row.year) else f"{int(row.year)}")
-    cols[4].metric("TVDB ID", f"{int(row.episode_id)}")
+    cols[4].metric("TVDB Content Rating", row.content_rating or "Unknown")
+    cols[5].metric("TVDB ID", f"{int(row.episode_id)}")
+    ratings = load_frame("SELECT source, rating_label, rating_normalized, votes FROM episode_ratings WHERE episode_id = ? AND source = ?", (episode_id, DISPLAY_RATING_SOURCE))
+    if not ratings.empty:
+        rating_cols = st.columns(min(len(ratings), 4))
+        for idx, rating in enumerate(ratings.itertuples(index=False)):
+            help_text = f"Normalized: {rating.rating_normalized:.1f}/100" if not pd.isna(rating.rating_normalized) else None
+            vote_text = f" ({int(rating.votes):,} votes)" if not pd.isna(rating.votes) else ""
+            rating_cols[idx % len(rating_cols)].metric(rating.source, f"{rating.rating_label}{vote_text}", help=help_text)
     if row.overview:
         st.write(row.overview)
     if row.image:
@@ -638,6 +863,27 @@ def get_person_collaborators(person_id: int) -> pd.DataFrame:
     )
 
 
+def get_person_rated_episodes(person_id: int, roles: tuple[str, ...]) -> pd.DataFrame:
+    params: list = [person_id, *roles, DISPLAY_RATING_SOURCE]
+    return load_frame(
+        f"""
+        SELECT e.episode_id, e.title, e.season_number, e.episode_number, e.aired, e.content_rating,
+               c.role, er.rating_label, er.rating_normalized, er.votes
+        FROM credits c
+        JOIN episodes e ON e.episode_id = c.episode_id
+        JOIN episode_ratings er ON er.episode_id = e.episode_id
+        WHERE c.person_id = ?
+          AND c.role IN ({placeholders(roles)})
+          AND er.source = ?
+        GROUP BY e.episode_id, e.title, e.season_number, e.episode_number, e.aired, e.content_rating,
+                 c.role, er.rating_label, er.rating_normalized, er.votes
+        ORDER BY er.rating_normalized DESC, er.votes DESC, e.season_number, e.episode_number
+        LIMIT 75
+        """,
+        tuple(params),
+    )
+
+
 def person_profile(person_id: int) -> None:
     person = load_frame("SELECT * FROM people WHERE person_id = ?", (person_id,))
     if person.empty:
@@ -659,7 +905,7 @@ def person_profile(person_id: int) -> None:
     for idx, summary in enumerate(role_summary.itertuples(index=False)):
         cols[idx % 4].metric(summary.role, f"{summary.episodes:,.0f}")
     timeline = credits.dropna(subset=["year"]).groupby(["year", "role"]).size().reset_index(name="credits")
-    tab_overview, tab_timeline, tab_collabs, tab_episodes = st.tabs(["Overview", "Career Timeline", "Network", "Episodes"])
+    tab_overview, tab_ratings, tab_timeline, tab_collabs, tab_episodes = st.tabs(["Overview", "Best Ratings", "Career Timeline", "Network", "Episodes"])
     with tab_overview:
         left, right = st.columns([1, 2])
         with left:
@@ -668,6 +914,17 @@ def person_profile(person_id: int) -> None:
         with right:
             st.subheader("Top Collaborators")
             person_button_rows(get_person_collaborators(person_id).head(25), f"collabs-{person_id}", "episodes_together")
+    with tab_ratings:
+        creative_roles = tuple(role for role in CREATIVE_ROLES if role in set(role_summary["role"].tolist()))
+        if not creative_roles:
+            st.caption("No director or writer credits found for this person.")
+        else:
+            selected_roles = st.multiselect("Creative role", list(creative_roles), default=list(creative_roles), key=f"person-ratings-roles-{person_id}")
+            if selected_roles:
+                rated = get_person_rated_episodes(person_id, tuple(selected_roles))
+                rated_episode_rows(rated, f"person-rated-{person_id}")
+            else:
+                st.caption("Select at least one role.")
     with tab_timeline:
         st.subheader("Credit Timeline")
         if timeline.empty:
@@ -690,23 +947,194 @@ def person_page(person_id: int) -> None:
     person_profile(person_id)
 
 
+def top_rated_role_episodes(role: str, where_clause: str, params: tuple) -> pd.DataFrame:
+    return load_frame(
+        f"""
+        SELECT p.person_id, p.name, e.episode_id, e.season_number, e.episode_number, e.title, e.content_rating,
+               er.rating_label, er.rating_normalized, er.votes
+        FROM episodes e
+        JOIN credits c ON c.episode_id = e.episode_id AND c.role = ?
+        JOIN people p ON p.person_id = c.person_id
+        JOIN episode_ratings er ON er.episode_id = e.episode_id
+        WHERE {where_clause} AND er.source = ?
+        ORDER BY er.rating_normalized DESC, er.votes DESC, e.season_number, e.episode_number, p.name COLLATE NOCASE
+        LIMIT 75
+        """,
+        (role, *params, DISPLAY_RATING_SOURCE),
+    )
+
+
+def trend_filters(base_where: str, base_params: tuple) -> tuple[str, tuple, int]:
+    st.subheader("Trend Filters")
+    content_rows = load_frame(
+        "SELECT DISTINCT content_rating FROM episodes WHERE content_rating IS NOT NULL AND TRIM(content_rating) <> '' ORDER BY content_rating"
+    )
+    content_ratings = content_rows["content_rating"].tolist() if not content_rows.empty else []
+    rating_bounds = load_frame(
+        """
+        SELECT COALESCE(MIN(rating_normalized), 0) AS min_rating,
+               COALESCE(MAX(rating_normalized), 100) AS max_rating,
+               COALESCE(MAX(votes), 0) AS max_votes
+        FROM episode_ratings
+        WHERE source = ?
+        """,
+        (DISPLAY_RATING_SOURCE,),
+    ).iloc[0]
+    min_rating_bound = int(rating_bounds["min_rating"])
+    max_rating_bound = int(rating_bounds["max_rating"])
+    max_votes_bound = int(rating_bounds["max_votes"])
+
+    filter_cols = st.columns([2, 1, 1, 1, 1])
+    selected_content = filter_cols[0].multiselect("Content rating", content_ratings)
+    min_rating = filter_cols[1].slider(
+        "Min IMDb",
+        min_rating_bound,
+        max_rating_bound,
+        min_rating_bound,
+    )
+    min_votes = filter_cols[2].number_input(
+        "Min votes",
+        min_value=0,
+        max_value=max_votes_bound,
+        value=0,
+        step=100,
+    )
+    include_specials = filter_cols[3].checkbox("Specials", value=True)
+    min_credits = filter_cols[4].number_input("Min credits", min_value=1, max_value=25, value=1, step=1)
+
+    clauses = [base_where]
+    params = list(base_params)
+    if selected_content:
+        clauses.append(f"e.content_rating IN ({placeholders(selected_content)})")
+        params.extend(selected_content)
+    if min_rating > min_rating_bound:
+        clauses.append(
+            """
+            EXISTS (
+                SELECT 1
+                FROM episode_ratings tr
+                WHERE tr.episode_id = e.episode_id
+                  AND tr.source = ?
+                  AND tr.rating_normalized >= ?
+            )
+            """
+        )
+        params.extend([DISPLAY_RATING_SOURCE, min_rating])
+    if min_votes > 0:
+        clauses.append(
+            """
+            EXISTS (
+                SELECT 1
+                FROM episode_ratings tr
+                WHERE tr.episode_id = e.episode_id
+                  AND tr.source = ?
+                  AND tr.votes >= ?
+            )
+            """
+        )
+        params.extend([DISPLAY_RATING_SOURCE, int(min_votes)])
+    if not include_specials:
+        clauses.append("e.season_number <> 0")
+
+    return " AND ".join(f"({clause})" for clause in clauses), tuple(params), int(min_credits)
+
+
+def role_rating_summary(role: str, where_clause: str, params: tuple, min_credits: int) -> pd.DataFrame:
+    return load_frame(
+        f"""
+        SELECT p.person_id,
+               p.name,
+               COUNT(DISTINCT e.episode_id) AS rated_episodes,
+               ROUND(AVG(er.rating_normalized), 1) AS avg_imdb,
+               ROUND(SUM(er.rating_normalized * COALESCE(er.votes, 0)) / NULLIF(SUM(COALESCE(er.votes, 0)), 0), 1) AS vote_weighted_imdb,
+               MIN(er.rating_normalized) AS lowest_imdb,
+               MAX(er.rating_normalized) AS highest_imdb,
+               SUM(er.votes) AS total_votes
+        FROM episodes e
+        JOIN credits c ON c.episode_id = e.episode_id AND c.role = ?
+        JOIN people p ON p.person_id = c.person_id
+        JOIN episode_ratings er ON er.episode_id = e.episode_id AND er.source = ?
+        WHERE {where_clause}
+        GROUP BY p.person_id, p.name
+        HAVING rated_episodes >= ?
+        ORDER BY avg_imdb DESC, rated_episodes DESC, total_votes DESC, p.name COLLATE NOCASE
+        LIMIT 50
+        """,
+        (role, DISPLAY_RATING_SOURCE, *params, min_credits),
+    )
+
+
 def trends_view(where_clause: str, params: tuple) -> None:
     page_header("Trends", "Analysis", "Explore patterns by season, year, director, writer, and recurring creative teams.")
-    by_season = load_frame(f"SELECT e.season_number AS season, COUNT(*) AS episodes FROM episodes e WHERE {where_clause} GROUP BY e.season_number ORDER BY e.season_number", params)
-    top_directors = load_frame(f"SELECT p.person_id, p.name, COUNT(DISTINCT e.episode_id) AS episodes FROM episodes e JOIN credits c ON c.episode_id = e.episode_id AND c.role = 'Director' JOIN people p ON p.person_id = c.person_id WHERE {where_clause} GROUP BY p.person_id, p.name ORDER BY episodes DESC, p.name COLLATE NOCASE LIMIT 50", params)
-    top_writers = load_frame(f"SELECT p.person_id, p.name, COUNT(DISTINCT e.episode_id) AS episodes FROM episodes e JOIN credits c ON c.episode_id = e.episode_id AND c.role = 'Writer' JOIN people p ON p.person_id = c.person_id WHERE {where_clause} GROUP BY p.person_id, p.name ORDER BY episodes DESC, p.name COLLATE NOCASE LIMIT 50", params)
+    trend_where, trend_params, min_credits = trend_filters(where_clause, params)
+    by_season = load_frame(f"SELECT e.season_number AS season, COUNT(*) AS episodes FROM episodes e WHERE {trend_where} GROUP BY e.season_number ORDER BY e.season_number", trend_params)
+    season_ratings = load_frame(
+        f"""
+        SELECT e.season_number AS season,
+               COUNT(DISTINCT e.episode_id) AS rated_episodes,
+               ROUND(AVG(er.rating_normalized), 1) AS avg_imdb,
+               ROUND(SUM(er.rating_normalized * COALESCE(er.votes, 0)) / NULLIF(SUM(COALESCE(er.votes, 0)), 0), 1) AS vote_weighted_imdb,
+               MIN(er.rating_normalized) AS lowest_imdb,
+               MAX(er.rating_normalized) AS highest_imdb,
+               SUM(er.votes) AS total_votes
+        FROM episodes e
+        JOIN episode_ratings er ON er.episode_id = e.episode_id AND er.source = ?
+        WHERE {trend_where}
+        GROUP BY e.season_number
+        ORDER BY e.season_number
+        """,
+        (DISPLAY_RATING_SOURCE, *trend_params),
+    )
+    top_directors = load_frame(f"SELECT p.person_id, p.name, COUNT(DISTINCT e.episode_id) AS episodes FROM episodes e JOIN credits c ON c.episode_id = e.episode_id AND c.role = 'Director' JOIN people p ON p.person_id = c.person_id WHERE {trend_where} GROUP BY p.person_id, p.name HAVING episodes >= ? ORDER BY episodes DESC, p.name COLLATE NOCASE LIMIT 50", (*trend_params, min_credits))
+    top_writers = load_frame(f"SELECT p.person_id, p.name, COUNT(DISTINCT e.episode_id) AS episodes FROM episodes e JOIN credits c ON c.episode_id = e.episode_id AND c.role = 'Writer' JOIN people p ON p.person_id = c.person_id WHERE {trend_where} GROUP BY p.person_id, p.name HAVING episodes >= ? ORDER BY episodes DESC, p.name COLLATE NOCASE LIMIT 50", (*trend_params, min_credits))
+    director_ratings = role_rating_summary("Director", trend_where, trend_params, min_credits)
+    writer_ratings = role_rating_summary("Writer", trend_where, trend_params, min_credits)
     overview_tab, directors_tab, writers_tab = st.tabs(["Overview", "Directors", "Writers"])
     with overview_tab:
+        st.subheader("Average IMDb by Season")
+        if season_ratings.empty:
+            st.caption("No IMDb ratings found for the current filters.")
+        else:
+            st.line_chart(season_ratings, x="season", y="avg_imdb", use_container_width=True)
+            st.dataframe(season_ratings, hide_index=True, use_container_width=True)
         st.subheader("Episodes by Season")
         st.bar_chart(by_season, x="season", y="episodes", use_container_width=True)
     with directors_tab:
+        st.subheader("Average IMDb by Director")
+        if director_ratings.empty:
+            st.caption("No rated directed episodes found for the current filters.")
+        else:
+            st.bar_chart(director_ratings.head(25), x="name", y="avg_imdb", use_container_width=True)
+            st.dataframe(director_ratings[["name", "rated_episodes", "avg_imdb", "vote_weighted_imdb", "lowest_imdb", "highest_imdb", "total_votes"]], hide_index=True, use_container_width=True)
         st.subheader("Episodes by Director")
         st.bar_chart(top_directors, x="name", y="episodes", use_container_width=True)
         person_button_rows(top_directors, "trend-director", "episodes")
+        st.subheader("Highest-Rated Directed Episodes")
+        directed = top_rated_role_episodes("Director", trend_where, trend_params)
+        if directed.empty:
+            st.caption("No rated directed episodes found for the current filters.")
+        else:
+            directed_display = directed.copy()
+            directed_display.insert(0, "episode", directed_display.apply(lambda item: episode_code(item["season_number"], item["episode_number"]), axis=1))
+            st.dataframe(directed_display[["name", "episode", "title", "rating_label", "rating_normalized", "votes", "content_rating"]], hide_index=True, use_container_width=True)
     with writers_tab:
+        st.subheader("Average IMDb by Writer")
+        if writer_ratings.empty:
+            st.caption("No rated written episodes found for the current filters.")
+        else:
+            st.bar_chart(writer_ratings.head(25), x="name", y="avg_imdb", use_container_width=True)
+            st.dataframe(writer_ratings[["name", "rated_episodes", "avg_imdb", "vote_weighted_imdb", "lowest_imdb", "highest_imdb", "total_votes"]], hide_index=True, use_container_width=True)
         st.subheader("Episodes by Writer")
         st.bar_chart(top_writers, x="name", y="episodes", use_container_width=True)
         person_button_rows(top_writers, "trend-writer", "episodes")
+        st.subheader("Highest-Rated Written Episodes")
+        written = top_rated_role_episodes("Writer", trend_where, trend_params)
+        if written.empty:
+            st.caption("No rated written episodes found for the current filters.")
+        else:
+            written_display = written.copy()
+            written_display.insert(0, "episode", written_display.apply(lambda item: episode_code(item["season_number"], item["episode_number"]), axis=1))
+            st.dataframe(written_display[["name", "episode", "title", "rating_label", "rating_normalized", "votes", "content_rating"]], hide_index=True, use_container_width=True)
 
 
 def teams_dashboard() -> None:
@@ -740,6 +1168,49 @@ def teams_dashboard() -> None:
         cols[1].button(row.second_name, key=f"team-second-{team_type}-{row.first_id}-{row.second_id}", on_click=open_person, args=(int(row.second_id),), use_container_width=True)
         cols[2].metric("Together", f"{row.episodes_together:,.0f}")
         cols[3].metric("Latest", "Unknown" if pd.isna(row.latest_year) else f"{int(row.latest_year)}")
+
+
+def ratings_view(where_clause: str, params: tuple) -> None:
+    page_header("Ratings", "Compare", "Find the highest-rated episodes in the IMDb data.")
+    coverage = load_frame(
+        f"""
+        SELECT COUNT(DISTINCT e.episode_id) AS episodes
+        FROM episodes e
+        WHERE {where_clause}
+        """,
+        params,
+    ).iloc[0]
+    st.metric("Episodes", f"{coverage.episodes:,.0f}")
+    local_where = where_clause
+    local_params = [*params, DISPLAY_RATING_SOURCE]
+    ratings = load_frame(
+        f"""
+        SELECT e.episode_id, e.season_number, e.episode_number, e.title, e.aired,
+               er.rating_label, er.rating_normalized, er.votes
+        FROM episodes e
+        JOIN episode_ratings er ON er.episode_id = e.episode_id
+        WHERE {local_where} AND er.source = ?
+        ORDER BY er.rating_normalized DESC, e.season_number, e.episode_number
+        """,
+        tuple(local_params),
+    )
+    if ratings.empty:
+        st.caption("No ratings found for the current filters.")
+        return
+    comparison = ratings[["episode_id", "season_number", "episode_number", "title", "aired", "rating_normalized"]].copy()
+    comparison = comparison.rename(columns={"rating_normalized": "IMDb"})
+    comparison.insert(0, "episode", comparison.apply(lambda item: episode_code(item["season_number"], item["episode_number"]), axis=1))
+    tabs = st.tabs(["Comparison", "Top Episodes", "Raw Ratings"])
+    with tabs[0]:
+        st.dataframe(comparison.drop(columns=["episode_id", "season_number", "episode_number"]), hide_index=True, use_container_width=True)
+    with tabs[1]:
+        top = ratings.dropna(subset=["rating_normalized"]).copy()
+        top.insert(0, "episode", top.apply(lambda item: episode_code(item["season_number"], item["episode_number"]), axis=1))
+        st.dataframe(top[["episode", "title", "rating_label", "rating_normalized", "votes"]].head(50), hide_index=True, use_container_width=True)
+    with tabs[2]:
+        display = ratings.copy()
+        display.insert(0, "episode", display.apply(lambda item: episode_code(item["season_number"], item["episode_number"]), axis=1))
+        st.dataframe(display, hide_index=True, use_container_width=True)
 
 
 def data_quality_view() -> None:
@@ -823,6 +1294,9 @@ def main() -> None:
     elif page == "Episodes":
         where_clause, params = sidebar_filters("e")
         episodes_view(where_clause, params)
+    elif page == "Ratings":
+        where_clause, params = sidebar_filters("e")
+        ratings_view(where_clause, params)
     elif page == "Person Search":
         person_search_view()
     elif page == "Trends":
