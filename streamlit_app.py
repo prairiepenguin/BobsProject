@@ -614,7 +614,7 @@ def episode_button_rows(frame: pd.DataFrame, key_prefix: str) -> None:
     for idx, row in enumerate(frame.itertuples(index=False)):
         cols = st.columns([4, 1, 2])
         label = f"{episode_code(row.season_number, row.episode_number)} - {row.title}"
-        cols[0].button(label, key=f"{key_prefix}-{idx}-{row.episode_id}", on_click=open_episode, args=(int(row.episode_id),), use_container_width=True)
+        cols[0].button(label, key=f"{key_prefix}-{idx}-{row.episode_id}", on_click=open_episode, args=(int(row.episode_id),), width="stretch")
         cols[1].markdown(f'<div class="bb-muted">{row.aired or "Unknown"}</div>', unsafe_allow_html=True)
         cols[2].markdown(f'<div class="bb-muted">{getattr(row, "creatives", None) or "No creative credits"}</div>', unsafe_allow_html=True)
 
@@ -626,7 +626,7 @@ def person_button_rows(frame: pd.DataFrame, key_prefix: str, metric_col: str = "
     list_header("Person", metric_col.replace("_", " ").title())
     for idx, row in enumerate(frame.itertuples(index=False)):
         cols = st.columns([5, 1])
-        cols[0].button(row.name, key=f"{key_prefix}-{idx}-{row.person_id}", on_click=open_person, args=(int(row.person_id),), use_container_width=True)
+        cols[0].button(row.name, key=f"{key_prefix}-{idx}-{row.person_id}", on_click=open_person, args=(int(row.person_id),), width="stretch")
         cols[1].markdown(f'<div class="bb-muted">{getattr(row, metric_col):,.0f}</div>', unsafe_allow_html=True)
 
 
@@ -700,19 +700,19 @@ def home_dashboard() -> None:
     with prompt_cols[0]:
         st.markdown("**Browse episodes**")
         st.caption("Search by title, season, air date, and creative credits.")
-        if st.button("Browse episodes", key="home-go-episodes", use_container_width=True):
+        if st.button("Browse episodes", key="home-go-episodes", width="stretch"):
             st.session_state.pending_nav = "Episodes"
             st.rerun()
     with prompt_cols[1]:
         st.markdown("**Find people**")
         st.caption("Open writers, directors, actors, and guest stars.")
-        if st.button("Search people", key="home-go-people", use_container_width=True):
+        if st.button("Search people", key="home-go-people", width="stretch"):
             st.session_state.pending_nav = "Person Search"
             st.rerun()
     with prompt_cols[2]:
         st.markdown("**Compare teams**")
         st.caption("See director/writer and creative/cast partnerships.")
-        if st.button("Explore teams", key="home-go-teams", use_container_width=True):
+        if st.button("Explore teams", key="home-go-teams", width="stretch"):
             st.session_state.pending_nav = "Teams"
             st.rerun()
     quick_episode, quick_person = st.columns(2)
@@ -760,7 +760,7 @@ def episodes_view(where_clause: str, params: tuple) -> None:
     )
     episode_button_rows(episodes, "episodes-list")
     with st.expander("Table view"):
-        st.dataframe(episodes, use_container_width=True, hide_index=True)
+        st.dataframe(episodes, width="stretch", hide_index=True)
 
 
 def person_search_view() -> None:
@@ -783,7 +783,7 @@ def credit_button_grid(credits: pd.DataFrame, roles: tuple[str, ...], label: str
     for idx, person in enumerate(group.itertuples(index=False)):
         role_note = "" if len(roles) == 1 else f" ({person.role})"
         character_note = f" as {person.character_name}" if getattr(person, "character_name", None) else ""
-        cols[idx % 3].button(f"{person.name}{role_note}{character_note}", key=f"{key_prefix}-{label}-{idx}-{person.person_id}-{person.role}", on_click=open_person, args=(int(person.person_id),), use_container_width=True)
+        cols[idx % 3].button(f"{person.name}{role_note}{character_note}", key=f"{key_prefix}-{label}-{idx}-{person.person_id}-{person.role}", on_click=open_person, args=(int(person.person_id),), width="stretch")
 
 
 def related_episode_rows(frame: pd.DataFrame, key_prefix: str) -> None:
@@ -795,7 +795,7 @@ def related_episode_rows(frame: pd.DataFrame, key_prefix: str) -> None:
         col.markdown(f'<div class="bb-list-header">{label}</div>', unsafe_allow_html=True)
     for idx, row in enumerate(frame.itertuples(index=False)):
         cols = st.columns([3, 1, 3, 2])
-        cols[0].button(f"{episode_code(row.season_number, row.episode_number)} - {row.title}", key=f"{key_prefix}-{idx}-{row.episode_id}-{row.role}", on_click=open_episode, args=(int(row.episode_id),), use_container_width=True)
+        cols[0].button(f"{episode_code(row.season_number, row.episode_number)} - {row.title}", key=f"{key_prefix}-{idx}-{row.episode_id}", on_click=open_episode, args=(int(row.episode_id),), width="stretch")
         cols[1].markdown(f'<div class="bb-muted">{row.aired or "Unknown"}</div>', unsafe_allow_html=True)
         cols[2].markdown(f'<div class="bb-muted">{row.shared_people or ""}</div>', unsafe_allow_html=True)
         cols[3].markdown(f'<div class="bb-muted">{row.connection_types or ""}</div>', unsafe_allow_html=True)
@@ -810,7 +810,7 @@ def rated_episode_rows(frame: pd.DataFrame, key_prefix: str) -> None:
         col.markdown(f'<div class="bb-list-header">{label}</div>', unsafe_allow_html=True)
     for idx, row in enumerate(frame.itertuples(index=False)):
         cols = st.columns([3, 1, 1, 1, 1])
-        cols[0].button(f"{episode_code(row.season_number, row.episode_number)} - {row.title}", key=f"{key_prefix}-{idx}-{row.episode_id}", on_click=open_episode, args=(int(row.episode_id),), use_container_width=True)
+        cols[0].button(f"{episode_code(row.season_number, row.episode_number)} - {row.title}", key=f"{key_prefix}-{idx}-{row.episode_id}", on_click=open_episode, args=(int(row.episode_id),), width="stretch")
         cols[1].markdown(f'<div class="bb-muted">{row.role}</div>', unsafe_allow_html=True)
         normalized = "" if pd.isna(row.rating_normalized) else f" ({row.rating_normalized:.1f}/100)"
         cols[2].markdown(f'<div class="bb-muted">{row.rating_label}{normalized}</div>', unsafe_allow_html=True)
@@ -846,7 +846,7 @@ def episode_detail_page(episode_id: int) -> None:
     if row.overview:
         st.write(row.overview)
     if row.image:
-        st.image(row.image, use_container_width=True)
+        st.image(row.image, width="stretch")
     credits = load_frame(
         f"""
         SELECT p.person_id, p.name, c.role, c.character_name, GROUP_CONCAT(DISTINCT c.source) AS sources
@@ -951,7 +951,7 @@ def person_profile(person_id: int) -> None:
         left, right = st.columns([1, 2])
         with left:
             st.subheader("Role Mix")
-            st.dataframe(role_summary, hide_index=True, use_container_width=True)
+            st.dataframe(role_summary, hide_index=True, width="stretch")
         with right:
             st.subheader("Top Collaborators")
             person_button_rows(get_person_collaborators(person_id).head(25), f"collabs-{person_id}", "episodes_together")
@@ -971,8 +971,8 @@ def person_profile(person_id: int) -> None:
         if timeline.empty:
             st.caption("No dated credits found.")
         else:
-            st.bar_chart(timeline, x="year", y="credits", color="role", use_container_width=True)
-            st.dataframe(timeline, hide_index=True, use_container_width=True)
+            st.bar_chart(timeline, x="year", y="credits", color="role", width="stretch")
+            st.dataframe(timeline, hide_index=True, width="stretch")
     with tab_collabs:
         st.subheader("Collaboration Network")
         person_button_rows(get_person_collaborators(person_id), f"network-{person_id}", "episodes_together")
@@ -980,7 +980,7 @@ def person_profile(person_id: int) -> None:
         st.subheader("Episode Credits")
         display = credits.copy()
         display.insert(0, "episode", display.apply(lambda item: episode_code(item["season_number"], item["episode_number"]), axis=1))
-        st.dataframe(display, hide_index=True, use_container_width=True)
+        st.dataframe(display, hide_index=True, width="stretch")
 
 
 def person_page(person_id: int) -> None:
@@ -1136,19 +1136,19 @@ def trends_view(where_clause: str, params: tuple) -> None:
         if season_ratings.empty:
             st.caption("No IMDb ratings found for the current filters.")
         else:
-            st.line_chart(season_ratings, x="season", y="avg_imdb", use_container_width=True)
-            st.dataframe(season_ratings, hide_index=True, use_container_width=True)
+            st.line_chart(season_ratings, x="season", y="avg_imdb", width="stretch")
+            st.dataframe(season_ratings, hide_index=True, width="stretch")
         st.subheader("Episodes by Season")
-        st.bar_chart(by_season, x="season", y="episodes", use_container_width=True)
+        st.bar_chart(by_season, x="season", y="episodes", width="stretch")
     with directors_tab:
         st.subheader("Average IMDb by Director")
         if director_ratings.empty:
             st.caption("No rated directed episodes found for the current filters.")
         else:
-            st.bar_chart(director_ratings.head(25), x="name", y="avg_imdb", use_container_width=True)
-            st.dataframe(director_ratings[["name", "rated_episodes", "avg_imdb", "vote_weighted_imdb", "lowest_imdb", "highest_imdb", "total_votes"]], hide_index=True, use_container_width=True)
+            st.bar_chart(director_ratings.head(25), x="name", y="avg_imdb", width="stretch")
+            st.dataframe(director_ratings[["name", "rated_episodes", "avg_imdb", "vote_weighted_imdb", "lowest_imdb", "highest_imdb", "total_votes"]], hide_index=True, width="stretch")
         st.subheader("Episodes by Director")
-        st.bar_chart(top_directors, x="name", y="episodes", use_container_width=True)
+        st.bar_chart(top_directors, x="name", y="episodes", width="stretch")
         person_button_rows(top_directors, "trend-director", "episodes")
         st.subheader("Highest-Rated Directed Episodes")
         directed = top_rated_role_episodes("Director", trend_where, trend_params)
@@ -1157,16 +1157,16 @@ def trends_view(where_clause: str, params: tuple) -> None:
         else:
             directed_display = directed.copy()
             directed_display.insert(0, "episode", directed_display.apply(lambda item: episode_code(item["season_number"], item["episode_number"]), axis=1))
-            st.dataframe(directed_display[["name", "episode", "title", "rating_label", "rating_normalized", "votes", "content_rating"]], hide_index=True, use_container_width=True)
+            st.dataframe(directed_display[["name", "episode", "title", "rating_label", "rating_normalized", "votes", "content_rating"]], hide_index=True, width="stretch")
     with writers_tab:
         st.subheader("Average IMDb by Writer")
         if writer_ratings.empty:
             st.caption("No rated written episodes found for the current filters.")
         else:
-            st.bar_chart(writer_ratings.head(25), x="name", y="avg_imdb", use_container_width=True)
-            st.dataframe(writer_ratings[["name", "rated_episodes", "avg_imdb", "vote_weighted_imdb", "lowest_imdb", "highest_imdb", "total_votes"]], hide_index=True, use_container_width=True)
+            st.bar_chart(writer_ratings.head(25), x="name", y="avg_imdb", width="stretch")
+            st.dataframe(writer_ratings[["name", "rated_episodes", "avg_imdb", "vote_weighted_imdb", "lowest_imdb", "highest_imdb", "total_votes"]], hide_index=True, width="stretch")
         st.subheader("Episodes by Writer")
-        st.bar_chart(top_writers, x="name", y="episodes", use_container_width=True)
+        st.bar_chart(top_writers, x="name", y="episodes", width="stretch")
         person_button_rows(top_writers, "trend-writer", "episodes")
         st.subheader("Highest-Rated Written Episodes")
         written = top_rated_role_episodes("Writer", trend_where, trend_params)
@@ -1175,7 +1175,7 @@ def trends_view(where_clause: str, params: tuple) -> None:
         else:
             written_display = written.copy()
             written_display.insert(0, "episode", written_display.apply(lambda item: episode_code(item["season_number"], item["episode_number"]), axis=1))
-            st.dataframe(written_display[["name", "episode", "title", "rating_label", "rating_normalized", "votes", "content_rating"]], hide_index=True, use_container_width=True)
+            st.dataframe(written_display[["name", "episode", "title", "rating_label", "rating_normalized", "votes", "content_rating"]], hide_index=True, width="stretch")
 
 
 def teams_dashboard() -> None:
@@ -1205,8 +1205,8 @@ def teams_dashboard() -> None:
         return
     for row in teams.itertuples(index=False):
         cols = st.columns([3, 3, 1, 1])
-        cols[0].button(row.first_name, key=f"team-first-{team_type}-{row.first_id}-{row.second_id}", on_click=open_person, args=(int(row.first_id),), use_container_width=True)
-        cols[1].button(row.second_name, key=f"team-second-{team_type}-{row.first_id}-{row.second_id}", on_click=open_person, args=(int(row.second_id),), use_container_width=True)
+        cols[0].button(row.first_name, key=f"team-first-{team_type}-{row.first_id}-{row.second_id}", on_click=open_person, args=(int(row.first_id),), width="stretch")
+        cols[1].button(row.second_name, key=f"team-second-{team_type}-{row.first_id}-{row.second_id}", on_click=open_person, args=(int(row.second_id),), width="stretch")
         cols[2].metric("Together", f"{row.episodes_together:,.0f}")
         cols[3].metric("Latest", "Unknown" if pd.isna(row.latest_year) else f"{int(row.latest_year)}")
 
@@ -1243,15 +1243,15 @@ def ratings_view(where_clause: str, params: tuple) -> None:
     comparison.insert(0, "episode", comparison.apply(lambda item: episode_code(item["season_number"], item["episode_number"]), axis=1))
     tabs = st.tabs(["Comparison", "Top Episodes", "Raw Ratings"])
     with tabs[0]:
-        st.dataframe(comparison.drop(columns=["episode_id", "season_number", "episode_number"]), hide_index=True, use_container_width=True)
+        st.dataframe(comparison.drop(columns=["episode_id", "season_number", "episode_number"]), hide_index=True, width="stretch")
     with tabs[1]:
         top = ratings.dropna(subset=["rating_normalized"]).copy()
         top.insert(0, "episode", top.apply(lambda item: episode_code(item["season_number"], item["episode_number"]), axis=1))
-        st.dataframe(top[["episode", "title", "rating_label", "rating_normalized", "votes"]].head(50), hide_index=True, use_container_width=True)
+        st.dataframe(top[["episode", "title", "rating_label", "rating_normalized", "votes"]].head(50), hide_index=True, width="stretch")
     with tabs[2]:
         display = ratings.copy()
         display.insert(0, "episode", display.apply(lambda item: episode_code(item["season_number"], item["episode_number"]), axis=1))
-        st.dataframe(display, hide_index=True, use_container_width=True)
+        st.dataframe(display, hide_index=True, width="stretch")
 
 
 def data_quality_view() -> None:
@@ -1285,10 +1285,10 @@ def data_quality_view() -> None:
         )
         episode_button_rows(missing, "quality-missing")
         with st.expander("Table view"):
-            st.dataframe(missing, hide_index=True, use_container_width=True)
+            st.dataframe(missing, hide_index=True, width="stretch")
     with tab_duplicates:
         duplicates = load_frame("SELECT LOWER(TRIM(name)) AS normalized_name, COUNT(*) AS rows, GROUP_CONCAT(person_id) AS person_ids FROM people GROUP BY LOWER(TRIM(name)) HAVING COUNT(*) > 1 ORDER BY rows DESC, normalized_name")
-        st.dataframe(duplicates, hide_index=True, use_container_width=True)
+        st.dataframe(duplicates, hide_index=True, width="stretch")
 
 
 def raw_sql_view() -> None:
@@ -1312,7 +1312,7 @@ def raw_sql_view() -> None:
             st.error("Only read-only SELECT queries are allowed.")
             return
         try:
-            st.dataframe(load_frame(query), hide_index=True, use_container_width=True)
+            st.dataframe(load_frame(query), hide_index=True, width="stretch")
         except Exception as exc:
             st.error(f"Query failed: {exc}")
 
