@@ -482,46 +482,6 @@ def load_frame(query: str, params: tuple = ()) -> pd.DataFrame:
 
 
 @st.cache_data(show_spinner=False)
-def table_exists(table_name: str) -> bool:
-    row = get_connection().execute(
-        "SELECT 1 FROM sqlite_master WHERE type IN ('table', 'view') AND name = ?",
-        (table_name,),
-    ).fetchone()
-    return row is not None
-
-
-@st.cache_data(show_spinner=False)
-def get_episode_storefronts(episode_id: int) -> pd.DataFrame:
-    if not table_exists("store_next_door"):
-        return pd.DataFrame(columns=["store_name", "notes"])
-    return load_frame(
-        """
-        SELECT store_name, notes
-        FROM store_next_door
-        WHERE episode_id = ?
-        ORDER BY store_next_door_id
-        """,
-        (episode_id,),
-    )
-
-
-def render_episode_storefronts(episode_id: int) -> None:
-    storefronts = get_episode_storefronts(episode_id)
-    st.subheader("Store Next Door")
-    if storefronts.empty:
-        if table_exists("store_next_door"):
-            st.caption("No Store Next Door listing is recorded for this episode.")
-        else:
-            st.caption("Store Next Door data is not installed in this database.")
-        return
-
-    for storefront in storefronts.itertuples(index=False):
-        st.markdown(f"**{storefront.store_name}**")
-        if getattr(storefront, "notes", None):
-            st.caption(storefront.notes)
-
-
-@st.cache_data(show_spinner=False)
 def get_roles() -> list[str]:
     rows = get_connection().execute("SELECT DISTINCT role FROM credits ORDER BY role COLLATE NOCASE").fetchall()
     return [row["role"] for row in rows]
@@ -842,7 +802,6 @@ def episode_detail_page(episode_id: int) -> None:
             help_text = f"Normalized: {rating.rating_normalized:.1f}/100" if not pd.isna(rating.rating_normalized) else None
             vote_text = f" ({int(rating.votes):,} votes)" if not pd.isna(rating.votes) else ""
             rating_cols[idx % len(rating_cols)].metric(rating.source, f"{rating.rating_label}{vote_text}", help=help_text)
-    render_episode_storefronts(episode_id)
     if row.overview:
         st.write(row.overview)
     if row.image:

@@ -795,7 +795,7 @@ def related_episode_rows(frame: pd.DataFrame, key_prefix: str) -> None:
         col.markdown(f'<div class="bb-list-header">{label}</div>', unsafe_allow_html=True)
     for idx, row in enumerate(frame.itertuples(index=False)):
         cols = st.columns([3, 1, 3, 2])
-        cols[0].button(f"{episode_code(row.season_number, row.episode_number)} - {row.title}", key=f"{key_prefix}-{idx}-{row.episode_id}-{row.role}", on_click=open_episode, args=(int(row.episode_id),), use_container_width=True)
+        cols[0].button(f"{episode_code(row.season_number, row.episode_number)} - {row.title}", key=f"{key_prefix}-{idx}-{row.episode_id}", on_click=open_episode, args=(int(row.episode_id),), use_container_width=True)
         cols[1].markdown(f'<div class="bb-muted">{row.aired or "Unknown"}</div>', unsafe_allow_html=True)
         cols[2].markdown(f'<div class="bb-muted">{row.shared_people or ""}</div>', unsafe_allow_html=True)
         cols[3].markdown(f'<div class="bb-muted">{row.connection_types or ""}</div>', unsafe_allow_html=True)
