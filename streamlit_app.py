@@ -6,6 +6,7 @@ from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+import streamlit.components.v1 as components
 
 
 APP_DIR = Path(__file__).resolve().parent
@@ -542,6 +543,7 @@ def get_year_bounds() -> tuple[int, int]:
 def open_episode(episode_id: int) -> None:
     st.session_state.view = "episode"
     st.session_state.selected_episode_id = int(episode_id)
+    st.session_state.scroll_to_top = True
 
 
 def open_person(person_id: int) -> None:
@@ -551,6 +553,30 @@ def open_person(person_id: int) -> None:
 
 def back_to_explorer() -> None:
     st.session_state.view = "explorer"
+
+
+def scroll_to_top_once() -> None:
+    if not st.session_state.pop("scroll_to_top", False):
+        return
+    components.html(
+        """
+        <script>
+            const doc = window.parent.document;
+            const targets = [
+                doc.querySelector("section[data-testid='stMain']"),
+                doc.querySelector("section.main"),
+                doc.querySelector("[data-testid='stAppViewContainer']")
+            ];
+            for (const target of targets) {
+                if (target && typeof target.scrollTo === "function") {
+                    target.scrollTo({ top: 0, left: 0, behavior: "auto" });
+                }
+            }
+            window.parent.scrollTo(0, 0);
+        </script>
+        """,
+        height=0,
+    )
 
 
 def render_sidebar_nav() -> str:
@@ -694,27 +720,6 @@ def search_people(search: str, role_group: str = "Directors") -> pd.DataFrame:
 
 
 def home_dashboard() -> None:
-    page_header("Welcome to Bob's Burgers Credits", "Discover", "Look up episodes, follow writers and directors, and explore recurring creative teams across the series.")
-    metric_row()
-    prompt_cols = st.columns(3)
-    with prompt_cols[0]:
-        st.markdown("**Browse episodes**")
-        st.caption("Search by title, season, air date, and creative credits.")
-        if st.button("Browse episodes", key="home-go-episodes", width="stretch"):
-            st.session_state.pending_nav = "Episodes"
-            st.rerun()
-    with prompt_cols[1]:
-        st.markdown("**Find people**")
-        st.caption("Open writers, directors, actors, and guest stars.")
-        if st.button("Search people", key="home-go-people", width="stretch"):
-            st.session_state.pending_nav = "Person Search"
-            st.rerun()
-    with prompt_cols[2]:
-        st.markdown("**Compare teams**")
-        st.caption("See director/writer and creative/cast partnerships.")
-        if st.button("Explore teams", key="home-go-teams", width="stretch"):
-            st.session_state.pending_nav = "Teams"
-            st.rerun()
     quick_episode, quick_person = st.columns(2)
     with quick_episode:
         st.subheader("Quick Episode Search")
@@ -821,6 +826,7 @@ def rated_episode_rows(frame: pd.DataFrame, key_prefix: str) -> None:
 
 
 def episode_detail_page(episode_id: int) -> None:
+    scroll_to_top_once()
     episode = load_frame("SELECT * FROM episodes WHERE episode_id = ?", (episode_id,))
     if episode.empty:
         st.error("Episode not found.")
@@ -828,6 +834,11 @@ def episode_detail_page(episode_id: int) -> None:
     row = episode.iloc[0]
     st.button("Back to explorer", on_click=back_to_explorer)
     page_header(row.title, "Explorer / Episode", "Writers, directors, cast, guest stars, and episodes connected by the same creative team.")
+    if row.overview:
+        st.write(row.overview)
+    if row.image:
+        image_col, _ = st.columns([2, 3])
+        image_col.image(row.image, width="stretch")
     cols = st.columns(6)
     cols[0].metric("Episode", episode_code(row.season_number, row.episode_number))
     cols[1].metric("Air Date", row.aired or "Unknown")
@@ -843,10 +854,6 @@ def episode_detail_page(episode_id: int) -> None:
             vote_text = f" ({int(rating.votes):,} votes)" if not pd.isna(rating.votes) else ""
             rating_cols[idx % len(rating_cols)].metric(rating.source, f"{rating.rating_label}{vote_text}", help=help_text)
     render_episode_storefronts(episode_id)
-    if row.overview:
-        st.write(row.overview)
-    if row.image:
-        st.image(row.image, width="stretch")
     credits = load_frame(
         f"""
         SELECT p.person_id, p.name, c.role, c.character_name, GROUP_CONCAT(DISTINCT c.source) AS sources
